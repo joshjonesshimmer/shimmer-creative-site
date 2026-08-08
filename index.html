@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shimmer Creative | Digital Experience, Automation & AI Systems</title>
+<meta name="description" content="Shimmer Creative builds the digital experience, automation, and AI systems that support how your service business already works. Websites, campaigns, automation, and measurement.">
+<link rel="canonical" href="https://unleashyourshimmer.com/">
+
+<!-- Favicon (firefly mark) -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shimmer Creative">
+<meta property="og:title" content="Shimmer Creative | Digital Experience, Automation & AI Systems">
+<meta property="og:description" content="You've built something extraordinary. Let's show the world. We build the digital systems that support how you already work.">
+<meta property="og:url" content="https://unleashyourshimmer.com/">
+<meta property="og:image" content="https://unleashyourshimmer.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shimmer Creative | Digital Experience, Automation & AI Systems">
+<meta name="twitter:description" content="You've built something extraordinary. Let's show the world. We build the digital systems that support how you already work.">
+<meta name="twitter:image" content="https://unleashyourshimmer.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0D1220; --ink-2:#0A0E1A; --ink-3:#0B1322;
+  --sapphire:#123A6B; --sapphire-lit:#1E5590;
+  --gold:#F6D36A; --gold-warm:#F4C655;
+  --teal:#4BC3C9; --violet:#4F3C78; --coral:#F58B7A;
+  --shell:#F9F4EE; --pale:#C8D5E8; --slate:#8A90A0;
+  --display:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",-apple-system,sans-serif;
+  --ease:cubic-bezier(0.23,1,0.32,1);
+  --grad:linear-gradient(100deg,#4BC3C9 0%,#7f8be6 38%,#F58B7A 70%,#F6D36A 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{font-family:var(--sans);background:transparent;color:var(--shell);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ---------- QUIET DARK BACKGROUND (fixed) ---------- */
+.bg-base{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 620px at 18% 22%, rgba(75,195,201,.16), transparent 72%),
+    radial-gradient(980px 680px at 78% 18%, rgba(245,139,122,.14), transparent 74%),
+    radial-gradient(900px 680px at 54% 60%, rgba(246,211,106,.075), transparent 78%),
+    radial-gradient(760px 560px at 36% 80%, rgba(79,60,120,.14), transparent 78%),
+    linear-gradient(180deg,#0D1220 0%,#0A0E1A 58%,#0B1322 100%);}
+.bg-base::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(75,195,201,.06) 0%,transparent 28%,rgba(245,139,122,.055) 58%,rgba(246,211,106,.035) 100%);
+  opacity:.75;mix-blend-mode:screen}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.018;background-image:radial-gradient(rgba(255,255,255,.7) 1px,transparent 1px);background-size:4px 4px}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 32px;position:relative;z-index:2}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:32px 0;transition:padding .4s var(--ease),background .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+nav.scrolled{padding:22px 0;background:rgba(10,14,26,.72);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
+#navstars{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity .6s var(--ease);pointer-events:none}
+nav.scrolled #navstars{opacity:1}
+nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--grad);background-size:220% auto;opacity:0;transition:opacity .5s var(--ease);pointer-events:none;animation:shimmer 9s ease-in-out infinite alternate}
+nav.scrolled::after{opacity:.9}
+.nav-in{max-width:1140px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.logo{display:inline-flex;align-items:center;text-decoration:none;line-height:0}
+.logo-lockup{height:58px;aspect-ratio:8614/1174;display:block;background:var(--grad);-webkit-mask:url(shimmer-lockup5-mask.svg) no-repeat center/contain;mask:url(shimmer-lockup5-mask.svg) no-repeat center/contain;transition:height .4s var(--ease)}
+nav.scrolled .logo-lockup{height:48px}
+.logo-mark{display:none;height:44px;aspect-ratio:1084/1188;background:var(--grad);-webkit-mask:url(shimmer-mark5-mask.svg) no-repeat center/contain;mask:url(shimmer-mark5-mask.svg) no-repeat center/contain}
+@media(max-width:560px){.logo-lockup{display:none}.logo-mark{display:block}nav.scrolled .logo-mark{height:38px}}
+.footer-logo{height:104px;width:auto;opacity:.92;margin-bottom:22px}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a:not(.nav-cta){color:var(--pale);text-decoration:none;font-size:.82rem;letter-spacing:.04em;font-weight:400;opacity:.85;transition:opacity .3s var(--ease),color .3s var(--ease)}
+.nav-links a:not(.nav-cta):hover{opacity:1;color:var(--shell)}
+/* progressive collapse: links hide first, then the CTA (earlier, so the big logo never crowds it) */
+@media(max-width:1120px){.nav-links a:not(.nav-cta){display:none}}
+@media(max-width:940px){.nav-links .nav-cta{display:none}}
+
+/* ---------- CANONICAL BUTTON FAMILY ---------- */
+.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 2.1rem;background:var(--gold);color:var(--ink);border:none;border-radius:100px;text-decoration:none;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1;cursor:pointer;opacity:1;position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease),color .3s var(--ease)}
+.btn-gold:hover{transform:translateY(-4px)}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 2.1rem;border:1px solid rgba(200,213,232,.25);color:var(--pale);border-radius:100px;text-decoration:none;font-family:var(--sans);font-size:.82rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;line-height:1;cursor:pointer;position:relative;overflow:hidden;transition:transform .35s var(--ease),border-color .3s var(--ease),color .3s var(--ease)}
+.btn-ghost:hover{border-color:rgba(246,211,106,.5);color:var(--shell);transform:translateY(-4px)}
+.form-submit{width:100%;padding:1rem;background:var(--gold);color:var(--ink);border:none;border-radius:100px;font-family:var(--sans);font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;margin-top:.5rem;position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .3s var(--ease)}
+.form-submit:hover{transform:translateY(-4px)}
+/* nav CTA is the exact hero btn-gold; opt out of nav-link styling, only nudge size */
+.nav-links .nav-cta,.btn-gold.nav-cta{background:var(--gold);color:var(--ink);opacity:1;padding:.7rem 1.5rem;font-size:.78rem;white-space:nowrap}
+.nav-links .nav-cta:hover,.btn-gold.nav-cta:hover{background:var(--gold);color:var(--ink);opacity:1;transform:translateY(-4px)}
+/* rainbow rim that follows the rounded top and softly fades down the corners */
+.btn-gold::before,.btn-ghost::before,.form-submit::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;background:var(--grad);
+  -webkit-mask:linear-gradient(to bottom,#000 0%,#000 16%,transparent 56%),linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:source-in,xor;
+  mask:linear-gradient(to bottom,#000 0%,#000 16%,transparent 56%),linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask-composite:intersect,exclude;
+  opacity:0;transition:opacity .4s var(--ease);pointer-events:none}
+.btn-gold:hover::before,.btn-ghost:hover::before,.form-submit:hover::before{opacity:1}
+
+/* ---------- HERO ---------- */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center}
+#hero .wrap{width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--slate);font-weight:600;margin-bottom:26px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3.1rem,7.4vw,6.2rem);line-height:1.05;letter-spacing:-.01em;max-width:940px;color:var(--shell)}
+.hero-gold{font-style:italic;background:linear-gradient(100deg,#F9F4EE 0%,#F6D36A 42%,#F4C655 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+#hero .eyebrow{color:var(--gold);opacity:.95}
+#hero .eyebrow::before{background:var(--gold);opacity:.55}
+.grad-text{background:var(--grad);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shimmer 9s ease-in-out infinite alternate}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+.hero-sub{margin-top:28px;max-width:540px;color:var(--pale);font-size:1.06rem;font-weight:300;line-height:1.6}
+.hero-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
+.capacity-rail{margin:56px auto 0;padding-top:24px;border-top:1px solid rgba(200,213,232,.10);max-width:720px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px}
+.capacity-rail span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--pale);font-weight:500}
+.capacity-rail i{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.75;display:inline-block;flex-shrink:0}
+
+/* ---------- REVEALS (slide in from the left, then lift on hover) ---------- */
+.reveal{opacity:0;transform:translateX(-44px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ---------- SECTION PRIMITIVES ---------- */
+section{position:relative}
+section > .wrap{position:relative;z-index:2}
+#hero .wrap,#say .wrap,#work .wrap,#diff .wrap,#process .wrap,#about .wrap,#contact .wrap{position:relative;z-index:2}
+footer{z-index:2}
+/* seamless: one continuous fixed background, no per-section haze */
+.sec-pad{padding:112px 0}
+.eyebrow-2{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px}
+.eyebrow-2::before{content:"";width:22px;height:1px;background:var(--gold);opacity:.55}
+h2{font-family:var(--display);font-weight:300;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.14;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--pale);font-weight:300;margin-top:14px}
+
+/* Pull quote: airy transition out of the hero */
+#say{padding:60px 0 104px;text-align:center;background:transparent}
+.say-q{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,3.9vw,3rem);line-height:1.3;max-width:860px;margin:0 auto}
+.say-q .grad-text{font-style:italic}
+
+/* What we do */
+#work{padding:8rem 0}
+.work-head{max-width:700px;margin-bottom:52px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{padding:30px 28px 34px;border-radius:14px;background:rgba(18,58,107,.22);border:1px solid rgba(200,213,232,.08);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);position:relative;overflow:hidden;transition:transform .4s var(--ease),border-color .4s,background .4s}
+.grid .card:nth-child(-n+3){background:rgba(18,58,107,.3);border-color:rgba(246,211,106,.14)}
+.card::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity .4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(246,211,106,.32);background:rgba(26,72,128,.34)}
+.card:hover::after{opacity:.9}
+.num{font-family:var(--display);font-style:italic;font-size:1.6rem;display:block;margin-bottom:14px;background:var(--grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.card h3{font-family:var(--sans);font-size:1.02rem;font-weight:600;line-height:1.3;margin-bottom:10px;color:var(--shell)}
+.card p{color:var(--slate);font-size:.9rem;line-height:1.55}
+
+/* Differentiator */
+#diff{padding:5rem 0}
+.diff-box{background:radial-gradient(ellipse at 50% 0%,rgba(246,211,106,.08),transparent 58%),linear-gradient(135deg,rgba(18,58,107,.42),rgba(79,60,120,.24));border:1px solid rgba(246,211,106,.14);border-radius:22px;padding:5rem 4rem;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 70px rgba(0,0,0,.24)}
+.diff-box .eyebrow-2{justify-content:center}
+.diff-quote{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,3rem);font-weight:300;line-height:1.22;max-width:820px;margin:0 auto}
+.diff-quote em{font-style:italic;color:var(--gold)}
+.diff-sub{margin:1.4rem auto 0;max-width:620px;font-size:.98rem;color:var(--pale);font-weight:300;line-height:1.7}
+@media(max-width:640px){.diff-box{padding:3.4rem 1.8rem}}
+
+/* Process */
+#process{padding:7rem 0}
+.process-head{max-width:640px;margin-bottom:4rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;gap:1.5rem}
+.steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1px;background:linear-gradient(to right,transparent,rgba(246,211,106,.3),rgba(75,195,201,.22),transparent)}
+.step{position:relative;z-index:1}
+.step-circle{width:56px;height:56px;border-radius:50%;border:1px solid rgba(246,211,106,.28);background:rgba(13,18,32,.72);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.25rem;color:var(--gold);margin-bottom:1.4rem;box-shadow:0 0 0 6px rgba(13,18,32,.45),0 0 24px rgba(246,211,106,.08)}
+.step h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--shell)}
+.step p{font-size:.88rem;color:var(--slate);line-height:1.6}
+@media(max-width:900px){.steps{grid-template-columns:1fr;gap:2rem}.steps::before{display:none}}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:center}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:36px}}
+.mono-frame{aspect-ratio:4/5;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(ellipse at 50% 30%,rgba(30,85,144,.4),rgba(13,18,32,.45));border:1px solid rgba(246,211,106,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px rgba(0,0,0,.35)}
+.mono-frame .mono{font-family:var(--display);font-style:italic;font-size:3.4rem;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.mono-frame .nm{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--slate)}
+#about p{color:var(--pale);font-weight:300;margin-top:16px;max-width:580px}
+.sig{margin-top:26px;font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--shell)}
+.sig small{display:block;font-family:var(--sans);font-style:normal;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:6px}
+
+/* Contact glass form */
+#contact{background:radial-gradient(1000px 520px at 72% 24%,rgba(18,58,107,.4),transparent),transparent}
+#contact.sec-pad{padding-bottom:150px}
+#contact footer{margin-top:72px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+.next-list{display:flex;flex-direction:column;gap:1.1rem;margin-top:2.2rem;border-top:1px solid rgba(200,213,232,.1);padding-top:2rem}
+.next-item{display:flex;gap:1rem;align-items:flex-start}
+.next-item .n{font-family:var(--display);font-style:italic;color:var(--gold);font-size:1.1rem;line-height:1.4;min-width:24px}
+.next-item p{font-size:.92rem;color:var(--pale);line-height:1.5}
+.form-wrap{background:rgba(18,58,107,.26);border:1px solid rgba(200,213,232,.1);border-radius:20px;padding:2.8rem;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.3)}
+.form-wrap h3{font-family:var(--display);font-size:1.6rem;font-weight:400;margin-bottom:1.8rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:520px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--pale);margin-bottom:.5rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(13,18,32,.5);border:1px solid rgba(200,213,232,.15);border-radius:8px;padding:.8rem 1rem;color:#F9F4EE;font-family:var(--sans);font-size:.9rem;font-weight:300;transition:border-color .3s,box-shadow .3s;-webkit-appearance:none;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(75,195,201,.1)}
+.form-group select option{background:#0D1220;color:#F9F4EE}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(200,213,232,.3)}
+.form-note{font-size:.76rem;color:var(--slate);text-align:center;margin-top:.9rem}
+.form-success{display:none;text-align:center;padding:2rem 0}
+.form-success .success-icon{font-size:2.5rem;margin-bottom:1rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.form-success h4{font-family:var(--display);font-size:1.6rem;font-weight:300;margin-bottom:.6rem}
+.form-success p{font-size:.88rem;color:var(--pale)}
+
+/* Footer */
+footer{position:relative;padding:40px 0;text-align:center;color:var(--slate);font-size:.8rem}
+footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(960px,calc(100% - 64px));height:1px;background:linear-gradient(to right,transparent,rgba(200,213,232,.08),transparent)}
+
+/* ---------- ACCESSIBILITY: calm motion for those who ask for it ---------- */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .grad-text,nav::after{animation:none!important;background-position:0% 50%!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-base"></div>
+<canvas id="stars"></canvas>
+<div class="grain"></div>
+
+<nav id="nav">
+  <canvas id="navstars"></canvas>
+  <div class="nav-in">
+    <a href="#hero" class="logo" aria-label="Shimmer Creative"><span class="logo-lockup"></span><span class="logo-mark"></span></a>
+    <div class="nav-links">
+      <a href="#work">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn-gold nav-cta">Request a consult</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="eyebrow">Digital experience, automation &amp; AI systems</div>
+    <h1 class="grad-text">You've built something extraordinary. Let's show the world.</h1>
+    <p class="hero-sub">Your best work is already happening. We build the digital systems that support how you already work.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-gold">Request a consult</a>
+      <a href="#work" class="btn-ghost">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section id="say">
+  <div class="wrap">
+    <p class="say-q reveal">Your shimmer is already there. Our job is to make sure the world <span class="grad-text">sees it</span>.</p>
+    <div class="capacity-rail reveal d1"><span>Websites</span><i></i><span>Campaigns</span><i></i><span>Automation</span><i></i><span>AI Systems</span><i></i><span>Measurement</span></div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="work">
+  <div class="wrap">
+    <div class="work-head">
+      <div class="eyebrow-2 reveal">Services</div>
+      <h2 class="reveal d1">Digital systems that support the way your business <em>already works.</em></h2>
+      <p class="lead reveal d2">Most strong service businesses don't have a quality problem. They have a translation problem. The value is real, but it doesn't always survive the trip to the screen, the inbox, the ad, the intake form, the follow-up.</p>
+      <p class="lead reveal d3">We build the systems that carry it through.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal d1"><span class="num">01</span><h3>Website + Conversion Path</h3><p>Clarify what you do, who it's for, and what to do next, on pages that answer the questions people already bring you in person.</p></div>
+      <div class="card reveal d2"><span class="num">02</span><h3>Google Ads + Paid Social</h3><p>Bring the right people in with search and social campaigns, tested creative, and tracking that ties clicks back to real conversations.</p></div>
+      <div class="card reveal d3"><span class="num">03</span><h3>Lead Follow-Up Automation</h3><p>Nobody falls through the cracks. Every inquiry gets a fast reply, every warm lead gets a nudge, and past clients still hear from you.</p></div>
+      <div class="card reveal d1"><span class="num">04</span><h3>Operations Automation</h3><p>Nothing gets done twice. Onboarding, handoffs, reminders, and internal next steps run on their own, so your hours go to the work only you can do.</p></div>
+      <div class="card reveal d2"><span class="num">05</span><h3>AI Systems</h3><p>Nothing sits waiting to be read. AI takes the intake summaries, the inbox triage, the reporting, and the first drafts, the thinking work that quietly eats the day.</p></div>
+      <div class="card reveal d3"><span class="num">06</span><h3>Measurement + Optimization</h3><p>See what's working, what isn't, and what to change next, in one clear view.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATOR -->
+<section id="diff">
+  <div class="wrap">
+    <div class="diff-box reveal">
+      <div class="eyebrow-2">What sets us apart</div>
+      <p class="diff-quote">You don't need a louder brand.<br><em>You need a clearer signal.</em></p>
+      <p class="diff-sub">We align your website, your campaigns, your follow-up, and the systems behind them, so your best work is visible, authentic, and unmistakable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="process-head">
+      <div class="eyebrow-2 reveal">Process</div>
+      <h2 class="reveal d1">From signal to <em>system.</em></h2>
+      <p class="lead reveal d2">Four steps. You'll always know which one you're in and what happens next.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal d1"><div class="step-circle">01</div><h3>Diagnose</h3><p>Map how your business actually runs, where trust is built, where leads slow down, and where internal work gets heavier than it needs to be.</p></div>
+      <div class="step reveal d2"><div class="step-circle">02</div><h3>Design</h3><p>Outline your personalized system: website, ads, follow-up, workflow automation, AI support, tracking, build order, timeline, and cost.</p></div>
+      <div class="step reveal d3"><div class="step-circle">03</div><h3>Build</h3><p>Ship the highest-impact pieces first, in clear stages you can see, test, and use.</p></div>
+      <div class="step reveal d4"><div class="step-circle">04</div><h3>Refine</h3><p>Measure what is working, and keep improving the system as your business grows.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec-pad">
+  <div class="wrap about-grid">
+    <div class="mono-frame reveal"><div class="mono">JJ</div><div class="nm">Josh Jones</div></div>
+    <div>
+      <div class="eyebrow-2 reveal">About</div>
+      <h2 class="reveal d1">Strategy and implementation, <em>under one roof.</em></h2>
+      <p class="reveal d2">Shimmer Creative is a digital experience, automation, and AI systems studio for owner-led service businesses whose real quality is stronger than the way they show up online.</p>
+      <p class="reveal d2">Shimmer Creative was founded by Josh Jones, Founder &amp; Principal Architect. His background in corporate digital marketing for Fortune 500 companies shaped how he thinks about strategy, systems, and customer experience. He built Shimmer Creative to bring that same strategic discipline to owner-led businesses, with digital systems that make their real quality easier to see, trust, and act on.</p>
+      <p class="reveal d3">We don't manufacture brilliance. We make it visible.</p>
+      <div class="sig reveal d3">Josh Jones<small>Founder &amp; Principal Architect</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec-pad">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <div class="eyebrow-2">Let's Talk</div>
+        <h2>Tell us about your business. What is working, and where it is not <em>showing up yet?</em></h2>
+        <p class="lead">A short, no-pressure conversation. We will listen to how your business already earns trust, where the digital experience or internal systems feel disconnected, and what a first practical improvement could look like.</p>
+        <div class="next-list">
+          <div class="next-item"><span class="n">01</span><p>You send a note. We reply within one business day.</p></div>
+          <div class="next-item"><span class="n">02</span><p>We talk for 30 minutes. No deck, no pressure.</p></div>
+          <div class="next-item"><span class="n">03</span><p>If there is a fit, you get a simple, straightforward proposal.</p></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="form-wrap">
+          <h3>Start a conversation</h3>
+          <form id="contactForm" action="https://formspree.io/f/mdenaavk" method="POST">
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Jane" required/></div>
+              <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required/></div>
+            </div>
+            <div class="form-group"><label>Business Email</label><input type="email" name="email" placeholder="jane@yourbusiness.com" required/></div>
+            <div class="form-group"><label>Business Name</label><input type="text" name="business" placeholder="Smith Consulting LLC"/></div>
+            <div class="form-group">
+              <label>What are you most interested in?</label>
+              <select name="interest">
+                <option value="" disabled selected>Select a service...</option>
+                <option>Website + Conversion Path</option>
+                <option>Google Ads + Paid Social</option>
+                <option>Lead Follow-Up Automation</option>
+                <option>Operations Automation</option>
+                <option>AI Systems</option>
+                <option>Measurement + Optimization</option>
+                <option>Full-system strategy (all of the above)</option>
+                <option>Not sure yet, I need guidance</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Tell us a bit about your business</label><textarea name="message" placeholder="What do you do, who do you serve, and what's the biggest thing you're trying to solve right now?"></textarea></div>
+            <button type="submit" class="form-submit">Send the note</button>
+            <p class="form-note">We typically respond within one business day.</p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✦</div>
+            <h4>Message received!</h4>
+            <p>We'll be in touch within one business day. We're looking forward to talking with you!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><img class="footer-logo" src="shimmer-logo2-vertical.png" alt="Shimmer Creative"><div>© 2026 Shimmer Creative, LLC · Raleigh / Cary, NC</div></footer>
+</section>
+
+<script>
+// Respect the visitor's reduced-motion preference: draw one static frame, skip the loops.
+const REDUCE_MOTION=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// ---- Fixed starfield with subtle starbursts ----
+const cv=document.getElementById("stars"),cx=cv.getContext("2d");
+let W,H,stars=[];
+function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+function init(){stars=[];const n=Math.floor(W*H/6800);for(let i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.25+.22,a:Math.random()*.38+.08,sp:Math.random()*.012+.004,ph:Math.random()*Math.PI*2,warm:Math.random()<.16,burst:Math.random()<.055})}
+let t=0;
+function draw(){
+  cx.clearRect(0,0,W,H);t+=.007;
+  for(const s of stars){
+    const a=s.a*(.7+.3*Math.sin(t*s.sp*80+s.ph));
+    const col=s.warm?`rgba(246,211,106,${a*1.08})`:`rgba(200,213,232,${a})`;
+    cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);cx.fillStyle=col;cx.fill();
+    if(s.burst){const len=s.r*4.2*(.8+.4*Math.sin(t*s.sp*80+s.ph));cx.strokeStyle=col;cx.lineWidth=.55;cx.beginPath();cx.moveTo(s.x-len,s.y);cx.lineTo(s.x+len,s.y);cx.moveTo(s.x,s.y-len);cx.lineTo(s.x,s.y+len);cx.stroke();}
+  }
+  if(!REDUCE_MOTION)requestAnimationFrame(draw);
+}
+rsz();init();draw();
+addEventListener("resize",()=>{rsz();init()});
+
+// ---- Nav: glass state + twinkle inside + rainbow line ----
+const nav=document.getElementById("nav");
+const ncv=document.getElementById("navstars"),ncx=ncv.getContext("2d");
+let nW,nH,nstars=[];
+function nrsz(){nW=ncv.width=nav.offsetWidth;nH=ncv.height=nav.offsetHeight;nstars=[];const n=Math.max(20,Math.floor(nW/38));for(let i=0;i<n;i++)nstars.push({x:Math.random()*nW,y:Math.random()*nH,r:Math.random()*1.1+.25,a:Math.random()*.5+.18,sp:Math.random()*.02+.006,ph:Math.random()*6.283,warm:Math.random()<.14});}
+let nt=0;
+function ndraw(){ncx.clearRect(0,0,nW,nH);nt+=.02;for(const s of nstars){const a=s.a*(.5+.5*Math.sin(nt*s.sp*60+s.ph));ncx.beginPath();ncx.arc(s.x,s.y,s.r,0,6.283);ncx.fillStyle=s.warm?`rgba(246,211,106,${a})`:`rgba(200,213,232,${a})`;ncx.fill();}if(!REDUCE_MOTION)requestAnimationFrame(ndraw);}
+nrsz();ndraw();addEventListener("resize",nrsz);
+let _scd=false;
+addEventListener("scroll",()=>{const s=scrollY>40;if(s!==_scd){_scd=s;nav.classList.toggle("scrolled",s);nrsz();}},{passive:true});
+
+// ---- Reveals ----
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.14,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ---- Contact form: submit to Formspree via fetch, keep the on-page success state ----
+const form=document.getElementById('contactForm');
+if(form){form.addEventListener('submit',async(ev)=>{
+  ev.preventDefault();
+  const btn=form.querySelector('.form-submit');
+  const label=btn?btn.textContent:'';
+  if(btn){btn.disabled=true;btn.textContent='Sending...';}
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok){form.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{if(btn){btn.disabled=false;btn.textContent=label;}alert('Sorry, something went wrong. Please email us directly.');}
+  }catch(e){if(btn){btn.disabled=false;btn.textContent=label;}alert('Sorry, something went wrong. Please email us directly.');}
+});}
+</script>
+</body>
+</html>
