@@ -183,6 +183,8 @@ h2 em{font-style:italic;color:var(--gold)}
 .mono-frame{aspect-ratio:4/5;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(ellipse at 50% 30%,rgba(30,85,144,.4),rgba(13,18,32,.45));border:1px solid rgba(246,211,106,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px rgba(0,0,0,.35)}
 .mono-frame .mono{font-family:var(--display);font-style:italic;font-size:3.4rem;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .mono-frame .nm{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--slate)}
+.photo-frame{aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:1px solid transparent;background:linear-gradient(var(--ink),var(--ink)) padding-box,var(--grad) border-box;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px rgba(0,0,0,.35)}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
 #about p{color:var(--pale);font-weight:300;margin-top:16px;max-width:580px}
 .sig{margin-top:26px;font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--shell)}
 .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:6px}
@@ -317,7 +319,7 @@ footer::before{content:"";position:absolute;top:0;left:50%;transform:translateX(
 <!-- ABOUT -->
 <section id="about" class="sec-pad">
   <div class="wrap about-grid">
-    <div class="mono-frame reveal"><div class="mono">JJ</div><div class="nm">Josh Jones</div></div>
+    <div class="photo-frame reveal"><img src="josh-jones.jpg" alt="Josh Jones, Founder and Principal Architect of Shimmer Creative"></div>
     <div>
       <div class="eyebrow-2 reveal">About</div>
       <h2 class="reveal d1">Strategy and implementation, <em>under one roof.</em></h2>
