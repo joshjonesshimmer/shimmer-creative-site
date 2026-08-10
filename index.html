@@ -41,6 +41,7 @@
   --sans:"DM Sans",-apple-system,sans-serif;
   --ease:cubic-bezier(0.23,1,0.32,1);
   --grad:linear-gradient(100deg,#4BC3C9 0%,#7f8be6 38%,#F58B7A 70%,#F6D36A 100%);
+  --sec:clamp(60px, 9vw, 116px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--ink)}
@@ -74,7 +75,15 @@ nav.scrolled::after{opacity:.9}
 .logo-lockup{height:58px;aspect-ratio:4770/580;display:block;background:var(--grad);-webkit-mask:url(shimmer-lockup6-mask.svg) no-repeat center/contain;mask:url(shimmer-lockup6-mask.svg) no-repeat center/contain;transition:height .4s var(--ease)}
 nav.scrolled .logo-lockup{height:48px}
 .logo-mark{display:none;height:44px;aspect-ratio:1908/1380;background:var(--grad);-webkit-mask:url(shimmer-mark6-mask.svg) no-repeat center/contain;mask:url(shimmer-mark6-mask.svg) no-repeat center/contain}
-@media(max-width:560px){.logo-lockup{display:none}.logo-mark{display:block}nav.scrolled .logo-mark{height:38px}}
+@media(max-width:940px){
+  nav.scrolled .nav-links .nav-cta{display:inline-flex;padding:.5rem 1.1rem;font-size:.72rem;letter-spacing:.04em}
+}
+@media(max-width:560px){
+  .nav-in{padding:0 20px}
+  .logo-lockup{height:32px}
+  nav.scrolled .logo-lockup{display:none}
+  nav.scrolled .logo-mark{display:block;height:30px}
+}
 .footer-logo{height:104px;width:auto;opacity:.92;margin-bottom:22px}
 .nav-links{display:flex;gap:34px;align-items:center}
 .nav-links a:not(.nav-cta){color:var(--pale);text-decoration:none;font-size:.82rem;letter-spacing:.04em;font-weight:400;opacity:.85;transition:opacity .3s var(--ease),color .3s var(--ease)}
@@ -104,7 +113,7 @@ nav.scrolled .logo-lockup{height:48px}
 .btn-gold:hover::before,.btn-ghost:hover::before,.form-submit:hover::before{opacity:1}
 
 /* ---------- HERO ---------- */
-#hero{position:relative;min-height:100vh;display:flex;align-items:center}
+#hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;padding:128px 0 72px}
 #hero .wrap{width:100%}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--slate);font-weight:600;margin-bottom:26px}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
@@ -131,7 +140,7 @@ section > .wrap{position:relative;z-index:2}
 #hero .wrap,#say .wrap,#work .wrap,#diff .wrap,#process .wrap,#about .wrap,#contact .wrap{position:relative;z-index:2}
 footer{z-index:2}
 /* seamless: one continuous fixed background, no per-section haze */
-.sec-pad{padding:112px 0}
+.sec-pad{padding:var(--sec) 0}
 .eyebrow-2{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px}
 .eyebrow-2::before{content:"";width:22px;height:1px;background:var(--gold);opacity:.55}
 h2{font-family:var(--display);font-weight:300;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.14;letter-spacing:-.01em}
@@ -139,12 +148,12 @@ h2 em{font-style:italic;color:var(--gold)}
 .lead{color:var(--pale);font-weight:300;margin-top:14px}
 
 /* Pull quote: airy transition out of the hero */
-#say{padding:60px 0 104px;text-align:center;background:transparent}
+#say{padding:calc(var(--sec) * .5) 0 var(--sec);text-align:center;background:transparent}
 .say-q{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,3.9vw,3rem);line-height:1.3;max-width:860px;margin:0 auto}
 .say-q .grad-text{font-style:italic}
 
 /* What we do */
-#work{padding:8rem 0}
+#work{padding:var(--sec) 0}
 .work-head{max-width:700px;margin-bottom:52px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
@@ -158,7 +167,7 @@ h2 em{font-style:italic;color:var(--gold)}
 .card p{color:var(--slate);font-size:.9rem;line-height:1.55}
 
 /* Differentiator */
-#diff{padding:5rem 0}
+#diff{padding:var(--sec) 0}
 .diff-box{background:radial-gradient(ellipse at 50% 0%,rgba(246,211,106,.08),transparent 58%),linear-gradient(135deg,rgba(18,58,107,.42),rgba(79,60,120,.24));border:1px solid rgba(246,211,106,.14);border-radius:22px;padding:5rem 4rem;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 70px rgba(0,0,0,.24)}
 .diff-box .eyebrow-2{justify-content:center}
 .diff-quote{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,3rem);font-weight:300;line-height:1.22;max-width:820px;margin:0 auto}
@@ -167,7 +176,7 @@ h2 em{font-style:italic;color:var(--gold)}
 @media(max-width:640px){.diff-box{padding:3.4rem 1.8rem}}
 
 /* Process */
-#process{padding:7rem 0}
+#process{padding:var(--sec) 0}
 .process-head{max-width:640px;margin-bottom:4rem}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;gap:1.5rem}
 .steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1px;background:linear-gradient(to right,transparent,rgba(246,211,106,.3),rgba(75,195,201,.22),transparent)}
@@ -191,7 +200,7 @@ h2 em{font-style:italic;color:var(--gold)}
 
 /* Contact glass form */
 #contact{background:radial-gradient(1000px 520px at 72% 24%,rgba(18,58,107,.4),transparent),transparent}
-#contact.sec-pad{padding-bottom:150px}
+#contact.sec-pad{padding-bottom:calc(var(--sec) + 28px)}
 #contact footer{margin-top:72px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:36px}}
@@ -210,6 +219,9 @@ h2 em{font-style:italic;color:var(--gold)}
 .form-group select option{background:#0D1220;color:#F9F4EE}
 .form-group textarea{resize:vertical;min-height:110px}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(200,213,232,.3)}
+@media(max-width:560px){
+  .form-group input,.form-group select,.form-group textarea{font-size:16px}
+}
 .form-note{font-size:.76rem;color:var(--slate);text-align:center;margin-top:.9rem}
 .form-success{display:none;text-align:center;padding:2rem 0}
 .form-success .success-icon{font-size:2.5rem;margin-bottom:1rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
