@@ -21,13 +21,15 @@ window.LF = {
   newToSpark: 2,
 
   // Launch emails (GHL Marketing > Emails > each campaign's Statistics)
+  // preview: image mockup shown on hover. Reminders reuse the original email's image.
+  // Ready for upcoming sends: previews/email-thu.jpg, previews/email-fri.jpg
   emails: [
-    { name: "The Living Forward Course is here!", date: "Sat, Oct 24", delivered: 5906, openRate: 15.8, clickRate: 0.30 },
-    { name: "Reminder of Saturday's email", date: "Sun, Oct 25", delivered: 5058, openRate: 4.8, clickRate: 0.02 },
-    { name: "Introducing our new online grief course", date: "Mon, Oct 26", delivered: 4573, openRate: 17.3, clickRate: 0.37 },
-    { name: "Reminder of Monday's email", date: "Tue, Oct 27", delivered: 3892, openRate: 4.8, clickRate: 0.08 },
-    { name: "Finding hope after loss, at your own pace", date: "Tue, Oct 27", delivered: 4567, openRate: 15.5, clickRate: 0.31 },
-    { name: "Inside our online grief course", date: "Wed, Oct 28", delivered: 4568, openRate: 7.0, clickRate: 0.24, early: true }
+    { name: "The Living Forward Course is here!", date: "Sat, Oct 24", delivered: 5906, openRate: 15.8, clickRate: 0.30, preview: "previews/email-sat.jpg" },
+    { name: "Reminder of Saturday's email", date: "Sun, Oct 25", delivered: 5058, openRate: 4.8, clickRate: 0.02, preview: "previews/email-sat.jpg" },
+    { name: "Introducing our new online grief course", date: "Mon, Oct 26", delivered: 4573, openRate: 17.3, clickRate: 0.37, preview: "previews/email-mon.jpg" },
+    { name: "Reminder of Monday's email", date: "Tue, Oct 27", delivered: 3892, openRate: 4.8, clickRate: 0.08, preview: "previews/email-mon.jpg" },
+    { name: "Finding hope after loss, at your own pace", date: "Tue, Oct 27", delivered: 4567, openRate: 15.5, clickRate: 0.31, preview: "previews/email-tue.jpg" },
+    { name: "Inside our online grief course", date: "Wed, Oct 28", delivered: 4568, openRate: 7.0, clickRate: 0.24, early: true, preview: "previews/email-wed.jpg" }
   ],
   emailsStillToCome: "A reminder tonight, Thursday morning's email, and Friday's last-day email with an evening reminder",
 
@@ -37,6 +39,7 @@ window.LF = {
   adVisits: 318,          // Results: Landing Page Views
   adReach: 13590,         // Reach
   adCostPerVisit: 0.30,   // Cost per result
+  adPreview: "previews/ad-v5.jpg",
 
   // Sale ends Friday, October 30 at 11:59 p.m. Eastern
   saleEnds: "2026-10-30T23:59:00-04:00"

@@ -25,11 +25,20 @@ header{display:flex;flex-direction:column;align-items:center;text-align:center;g
 h1{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--orange);font-size:clamp(40px,7vw,68px);line-height:1.05}
 h1 span{display:block;font-style:normal;font-weight:700;color:var(--navy);font-size:.62em;margin-top:6px}
 
-.countdown{background:var(--navy);color:var(--paper);border-radius:18px;padding:30px 28px;text-align:center;margin-bottom:22px;box-shadow:0 14px 34px rgba(22,35,63,.18)}
-.countdown .label{font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.countdown .big{font-family:var(--serif);font-weight:700;font-size:clamp(44px,11vw,104px);line-height:1.1;margin:10px 0 14px;white-space:nowrap}
-.countdown .sub{font-size:20px;color:#DCCFC0}
-.countdown .sub b{color:var(--paper)}
+.hero{background:var(--navy);color:var(--paper);border-radius:18px;padding:34px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;box-shadow:0 14px 34px rgba(22,35,63,.18)}
+.hero .m{padding:4px 10px}
+.hero .m + .m{border-left:1px solid rgba(252,250,247,.18)}
+.hero .label{font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.hero .big{font-family:var(--serif);font-weight:700;font-size:clamp(48px,8vw,84px);line-height:1.08;margin:8px 0 6px}
+.hero .sub{font-size:17px;color:#DCCFC0}
+
+/* Preview links */
+.pv-link{font:inherit;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.02em;color:var(--orange);background:none;border:0;border-bottom:1.5px dotted var(--orange);padding:0;cursor:pointer;margin-left:10px;vertical-align:1px}
+.pv-link:hover,.pv-link:focus-visible{color:var(--navy);border-bottom-color:var(--navy);outline:none}
+h2.section .pv-link{margin:0;font-size:16px}
+#pv{position:fixed;z-index:50;display:none;background:#fff;border-radius:12px;padding:8px;box-shadow:0 18px 48px rgba(22,35,63,.28);pointer-events:none}
+#pv img{display:block;width:320px;height:auto;max-height:70vh;object-fit:cover;object-position:top;border-radius:8px}
+#pv.show{display:block}
 
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .grid.three{grid-template-columns:repeat(3,1fr)}
@@ -102,7 +111,10 @@ footer b{color:var(--navy)}
 @media (max-width:720px){
   .wrap{padding:28px 16px 44px}
   .grid,.grid.three{grid-template-columns:1fr;gap:16px}
-  .countdown{padding:26px 18px}
+  .hero{grid-template-columns:1fr;padding:22px 18px;gap:0}
+  .hero .m{padding:14px 0}
+  .hero .m + .m{border-left:0;border-top:1px solid rgba(252,250,247,.18)}
+  #pv img{width:min(78vw,320px)}
   .card{padding:22px 18px}
   .logo img{height:44px}
   .bars{gap:6px;height:200px}
@@ -124,29 +136,24 @@ footer b{color:var(--navy)}
     <h1>The Living Forward Course<span>Launch at a Glance</span></h1>
   </header>
 
-  <section class="countdown">
-    <div class="label" id="cd-label">Time left at $99</div>
-    <div class="big" id="cd-big">-</div>
-    <div class="sub" id="cd-sub">Code <b>FORWARD99</b> · Through Friday, October 30 at 11:59 p.m. Eastern</div>
+  <section class="hero">
+    <div class="m">
+      <div class="label">Enrollments</div>
+      <div class="big" id="enrollments">-</div>
+      <div class="sub">People now taking the course</div>
+    </div>
+    <div class="m">
+      <div class="label">Course Sales</div>
+      <div class="big" id="revenue">-</div>
+      <div class="sub">At the $99 launch price</div>
+    </div>
+    <div class="m">
+      <div class="label">Course Page Visits</div>
+      <div class="big" id="advisits">-</div>
+      <div class="sub">From the Facebook and Instagram ad</div>
+    </div>
   </section>
 
-  <section class="grid three">
-    <div class="card">
-      <div class="k">Enrollments</div>
-      <div class="v orange" id="enrollments">-</div>
-      <div class="d">People now taking The Living Forward Course</div>
-    </div>
-    <div class="card">
-      <div class="k">Course Sales</div>
-      <div class="v" id="revenue">-</div>
-      <div class="d">At the $99 launch price</div>
-    </div>
-    <div class="card">
-      <div class="k">Course Page Visits</div>
-      <div class="v" id="advisits">-</div>
-      <div class="d">From the Facebook and Instagram ad</div>
-    </div>
-  </section>
 
   <h2 class="section">Where Enrollments Came From</h2>
   <section class="card">
@@ -158,22 +165,7 @@ footer b{color:var(--navy)}
     <p class="note">New people found the course through Facebook, Instagram or friends, and they are now on the email list too.</p>
   </section>
 
-  <h2 class="section">Enrollments by Day</h2>
-  <section class="card">
-    <div class="bars" id="bars"></div>
-    <div class="days" id="days"></div>
-  </section>
-
-  <h2 class="section">Launch Emails <span id="emailsub">-</span></h2>
-  <section class="card">
-    <table class="em">
-      <thead><tr><th>Email</th><th class="n hide-sm">Reached</th><th class="n">Opened</th><th class="n">Clicked</th></tr></thead>
-      <tbody id="emrows"></tbody>
-    </table>
-    <p class="note" id="emnote"></p>
-  </section>
-
-  <h2 class="section">Facebook &amp; Instagram Ad</h2>
+  <h2 class="section">Facebook &amp; Instagram Ad <span><button class="pv-link" type="button" data-pv="" id="adpv">Preview the ad</button></span></h2>
   <section class="grid">
     <div class="card">
       <div class="k">Ad Budget Used</div>
@@ -204,6 +196,22 @@ footer b{color:var(--navy)}
       <li>The ad is introducing Spark of Life to new people for about 30 cents a visit, and people who were new to Spark of Life are already enrolling.</li>
     </ul>
   </section>
+
+  <h2 class="section">Enrollments by Day</h2>
+  <section class="card">
+    <div class="bars" id="bars"></div>
+    <div class="days" id="days"></div>
+  </section>
+
+  <h2 class="section">Launch Emails <span id="emailsub">-</span></h2>
+  <section class="card">
+    <table class="em">
+      <thead><tr><th>Email</th><th class="n hide-sm">Reached</th><th class="n">Opened</th><th class="n">Clicked</th></tr></thead>
+      <tbody id="emrows"></tbody>
+    </table>
+    <p class="note" id="emnote"></p>
+  </section>
+
 
   <footer>Updated <b id="updated">-</b></footer>
 </div>
@@ -248,7 +256,7 @@ footer b{color:var(--navy)}
   $('emailsub').textContent = em.length + ' emails · ' + n(reached) + ' inboxes reached';
   var maxRate = Math.max.apply(null, em.map(function(e){ return e.openRate||0; }).concat([1]));
   $('emrows').innerHTML = em.map(function(e){
-    return '<tr><td><span class="subj">'+e.name+'</span>'+(e.early?'<span class="tag">Still coming in</span>':'')
+    return '<tr><td><span class="subj">'+e.name+'</span>'+(e.preview?'<button class="pv-link" type="button" data-pv="'+e.preview+'">Preview</button>':'')+(e.early?'<span class="tag">Still coming in</span>':'')
          + '<span class="when">'+e.date+'</span></td>'
          + '<td class="n hide-sm">'+n(e.delivered)+'</td>'
          + '<td class="n"><div class="rate"><div class="track"><div style="width:'+(e.openRate/maxRate*100)+'%"></div></div>'+e.openRate.toFixed(1)+'%</div></td>'
@@ -265,21 +273,33 @@ footer b{color:var(--navy)}
 
   $('updated').textContent = D.updated || '';
 
-  var end = new Date(D.saleEnds || '2026-10-30T23:59:00-04:00').getTime();
-  function tick(){
-    var ms = end - Date.now();
-    if (ms <= 0){
-      $('cd-label').textContent = 'Launch week complete';
-      $('cd-big').textContent = 'Thank you';
-      $('cd-sub').innerHTML = 'The $99 launch price ended Friday, October 30';
-      return;
-    }
-    var d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
-    $('cd-big').textContent = d > 0 ? (d + (d===1?' day ':' days ') + h + (h===1?' hr':' hrs'))
-                                    : (h + (h===1?' hr ':' hrs ') + m + ' min');
-    setTimeout(tick, 30000);
+  if (D.adPreview){ $('adpv').setAttribute('data-pv', D.adPreview); } else { $('adpv').hidden = true; }
+
+  // Hover (or tap) a Preview link to see the email or ad
+  var pv = document.createElement('div'); pv.id = 'pv';
+  var pimg = document.createElement('img'); pimg.alt = 'Preview'; pv.appendChild(pimg);
+  document.body.appendChild(pv);
+  var current = null;
+  function place(btn){
+    var r = btn.getBoundingClientRect(), vw = window.innerWidth, vh = window.innerHeight;
+    var w = pv.offsetWidth, h = pv.offsetHeight;
+    var x = r.right + 14; if (x + w > vw - 10) x = r.left - w - 14; if (x < 10) x = Math.max(10, (vw - w) / 2);
+    var y = r.top + r.height/2 - h/2; y = Math.max(10, Math.min(y, vh - h - 10));
+    pv.style.left = x + 'px'; pv.style.top = y + 'px';
   }
-  tick();
+  function show(btn){
+    var src = btn.getAttribute('data-pv'); if (!src) return;
+    current = btn;
+    if (pimg.getAttribute('src') !== src){ pimg.onload = function(){ if (current === btn) place(btn); }; pimg.src = src; }
+    pv.className = 'show'; place(btn);
+  }
+  function hide(){ current = null; pv.className = ''; }
+  document.addEventListener('mouseover', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b) show(b); });
+  document.addEventListener('mouseout', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b && !b.contains(e.relatedTarget)) hide(); });
+  document.addEventListener('focusin', function(e){ if (e.target.classList && e.target.classList.contains('pv-link')) show(e.target); });
+  document.addEventListener('focusout', function(e){ if (e.target.classList && e.target.classList.contains('pv-link')) hide(); });
+  document.addEventListener('click', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b){ e.preventDefault(); show(b); } else hide(); });
+  window.addEventListener('scroll', function(){ if (current) hide(); }, {passive:true});
 })();
 </script>
 </body>
