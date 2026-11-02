@@ -1,7 +1,7 @@
 // Spark of Life · The Living Forward Course launch dashboard
 // Update these numbers, then push. Everything on the page reads from here.
 window.LF = {
-  updated: "Sunday, November 1 at 7:45 a.m. Eastern",
+  updated: "Monday, November 2 at 7:55 a.m. Eastern",
   eyebrow: "Launch Extended",
 
   // Purchases (GHL Payments > Transactions, "Living Forward: Finding Hope After Loss")
@@ -17,15 +17,15 @@ window.LF = {
     { day: "Thu", date: "Oct 29", count: 0 },
     { day: "Fri", date: "Oct 30", count: 5 },
     { day: "Sat", date: "Oct 31", count: 0 },
-    { day: "Sun", date: "Nov 1", count: 0, today: true },
-    { day: "Mon", date: "Nov 2", count: 0, upcoming: true },
+    { day: "Sun", date: "Nov 1", count: 1 },
+    { day: "Mon", date: "Nov 2", count: 0, today: true },
     { day: "Tue", date: "Nov 3", count: 0, upcoming: true },
     { day: "Wed", date: "Nov 4", count: 0, upcoming: true },
     { day: "Thu", date: "Nov 5", count: 0, upcoming: true },
     { day: "Fri", date: "Nov 6", count: 0, upcoming: true }
   ],
   // Where enrollments came from (GHL contact record: on the list before buying, or new)
-  fromEmailList: 11,
+  fromEmailList: 12,
   newToSpark: 4,
 
   // Launch emails (GHL Marketing > Emails > each campaign's Statistics)
@@ -39,9 +39,10 @@ window.LF = {
     { name: "Finding hope after loss, at your own pace", date: "Tue, Oct 27", delivered: 4567, openRate: 17.0, clickRate: 0.33, preview: "previews/email-tue.jpg" },
     { name: "Inside our online grief course", date: "Wed, Oct 28", delivered: 4565, openRate: 17.5, clickRate: 0.26, preview: "previews/email-wed.jpg" },
     { name: "Last day: $99 for our online grief course", date: "Fri, Oct 30", delivered: 4560, openRate: 17.4, clickRate: 0.39, preview: "previews/email-fri.jpg" },
-    { name: "Great News: One More Week at $99!", date: "Sat, Oct 31", delivered: 5866, openRate: 15.4, clickRate: 0.27, early: true, preview: "previews/email-fri.jpg" }
+    { name: "Great News: One More Week at $99!", date: "Sat, Oct 31", delivered: 5866, openRate: 16.8, clickRate: 0.27, preview: "previews/email-fri.jpg" },
+    { name: "Reminder of Saturday's email", date: "Sun, Nov 1", delivered: 4948, openRate: 3.9, clickRate: 0.04, early: true, preview: "previews/email-fri.jpg" }
   ],
-  emailsStillToCome: "Sunday's reminder of the \"One More Week\" email",
+  emailsStillToCome: "",
 
   // Meta ad (Ads Manager > campaign "SOL - Living Forward Course Launch - Oct 2026" > ad set)
   adSpend: 249.55,
