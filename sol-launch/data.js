@@ -1,7 +1,7 @@
 // Spark of Life · The Living Forward Course launch dashboard
 // Update these numbers, then push. Everything on the page reads from here.
 window.LF = {
-  updated: "Wednesday, November 4 at 10:30 p.m. Eastern",
+  updated: "Thursday, November 5 at 7:46 a.m. Eastern",
   eyebrow: "Launch Extended",
 
   // Purchases (GHL Payments > Transactions, "Living Forward: Finding Hope After Loss")
@@ -20,8 +20,8 @@ window.LF = {
     { day: "Sun", date: "Nov 1", count: 1 },
     { day: "Mon", date: "Nov 2", count: 4 },
     { day: "Tue", date: "Nov 3", count: 1 },
-    { day: "Wed", date: "Nov 4", count: 2, today: true },
-    { day: "Thu", date: "Nov 5", count: 0, upcoming: true },
+    { day: "Wed", date: "Nov 4", count: 2 },
+    { day: "Thu", date: "Nov 5", count: 0, today: true },
     { day: "Fri", date: "Nov 6", count: 0, upcoming: true }
   ],
   // Where enrollments came from (GHL contact record: on the list before buying, or new)
@@ -41,16 +41,16 @@ window.LF = {
     { name: "Last day: $99 for our online grief course", date: "Fri, Oct 30", delivered: 4560, openRate: 17.4, clickRate: 0.39, preview: "previews/email-fri.jpg" },
     { name: "Great News: One More Week at $99!", date: "Sat, Oct 31", delivered: 5866, openRate: 16.8, clickRate: 0.27, preview: "previews/email-fri.jpg" },
     { name: "Reminder of Saturday's email", date: "Sun, Nov 1", delivered: 4948, openRate: 4.7, clickRate: 0.04, preview: "previews/email-fri.jpg" },
-    { name: "Your First Step Toward Hope: $99 Ends Friday", date: "Tue, Nov 3", delivered: 5836, openRate: 16.3, clickRate: 0.29, preview: "previews/email-fri.jpg" },
-    { name: "Reminder of Monday's email", date: "Wed, Nov 4", delivered: 4907, openRate: 2.0, clickRate: 0.04, preview: "previews/email-fri.jpg", early: true }
+    { name: "Your First Step Toward Hope: $99 Ends Friday", date: "Tue, Nov 3", delivered: 5836, openRate: 16.5, clickRate: 0.29, preview: "previews/email-fri.jpg" },
+    { name: "Reminder of Monday's email", date: "Wed, Nov 4", delivered: 4907, openRate: 2.6, clickRate: 0.06, preview: "previews/email-fri.jpg", early: true }
   ],
-  emailsStillToCome: "Wednesday's email, Thursday's personal note and Friday's last-day email",
+  emailsStillToCome: "Thursday's personal note and Friday's last-day email",
 
   // Meta ad (Ads Manager > campaign "SOL - Living Forward Course Launch - Oct 2026" > ad set)
-  adSpend: 412.89,
+  adSpend: 449.83,
   adBudget: 650,
-  adVisits: 1231,         // Results: Landing Page Views
-  adReach: 34728,         // Reach
+  adVisits: 1339,         // Results: Landing Page Views
+  adReach: 37277,         // Reach
   adCostPerVisit: 0.34,   // Cost per result
   adRunsThrough: "Runs through Friday, November 6",
   adPreview: "previews/ad-v5.jpg",
