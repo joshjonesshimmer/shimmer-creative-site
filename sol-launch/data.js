@@ -1,7 +1,7 @@
 // Spark of Life · The Living Forward Course launch dashboard
 // Update these numbers, then push. Everything on the page reads from here.
 window.LF = {
-  updated: "Thursday, November 5 at 7:46 a.m. Eastern",
+  updated: "Friday, November 6 at 8:15 a.m. Eastern. Email results are from Thursday, November 5 at 7:46 a.m.",
   eyebrow: "Launch Extended",
 
   // Purchases (GHL Payments > Transactions, "Living Forward: Finding Hope After Loss")
@@ -21,8 +21,8 @@ window.LF = {
     { day: "Mon", date: "Nov 2", count: 4 },
     { day: "Tue", date: "Nov 3", count: 1 },
     { day: "Wed", date: "Nov 4", count: 2 },
-    { day: "Thu", date: "Nov 5", count: 0, today: true },
-    { day: "Fri", date: "Nov 6", count: 0, upcoming: true }
+    { day: "Thu", date: "Nov 5", count: 9 },
+    { day: "Fri", date: "Nov 6", count: 0, today: true }
   ],
   // Where enrollments came from (GHL contact record: on the list before buying, or new)
   fromEmailList: 15,
@@ -47,10 +47,10 @@ window.LF = {
   emailsStillToCome: "Thursday's personal note and Friday's last-day email",
 
   // Meta ad (Ads Manager > campaign "SOL - Living Forward Course Launch - Oct 2026" > ad set)
-  adSpend: 449.83,
+  adSpend: 564.89,
   adBudget: 650,
-  adVisits: 1339,         // Results: Landing Page Views
-  adReach: 37277,         // Reach
+  adVisits: 1676,         // Results: Landing Page Views
+  adReach: 43212,         // Reach
   adCostPerVisit: 0.34,   // Cost per result
   adRunsThrough: "Runs through Friday, November 6",
   adPreview: "previews/ad-v5.jpg",

@@ -132,7 +132,7 @@ footer b{color:var(--navy)}
 <div class="wrap">
   <header>
     <div class="logo"><img src="../sol-course-page/assets/logo.png" alt="Spark of Life"></div>
-    <div class="eyebrow">Launch Week</div>
+    <div class="eyebrow">Launch Extended</div>
     <h1>The Living Forward Course<span>Launch at a Glance</span></h1>
   </header>
 
@@ -162,7 +162,7 @@ footer b{color:var(--navy)}
       <div><i style="background:var(--navy)"></i><b id="fromlist">-</b> from the Spark of Life email list</div>
       <div><i style="background:var(--orange)"></i><b id="newppl">-</b> new to Spark of Life</div>
     </div>
-    <p class="note">New people found the course through Facebook, Instagram or friends, and they are now on the email list too.</p>
+    <p class="note">New people found the course through Facebook, Instagram or friends, and they are now on the email list too. This split covers the first 23 enrollments.</p>
   </section>
 
   <h2 class="section">Facebook &amp; Instagram Ad <span><button class="pv-link" type="button" data-pv="" id="adpv">Preview the ad</button></span></h2>
@@ -183,7 +183,7 @@ footer b{color:var(--navy)}
       <ul class="learn" style="margin-top:12px">
         <li>Women 55 and over are the largest group visiting the course page from the ad.</li>
         <li>Short videos (Reels) on Facebook and Instagram bring in nearly all of the visits.</li>
-        <li>The budget was raised to $250 on Wednesday to reach more people before the launch price ends.</li>
+        <li>The ad was extended on Tuesday, November 3 with $400 more, to reach new people before the $99 price ends Friday night.</li>
       </ul>
     </div>
   </section>
@@ -267,7 +267,7 @@ footer b{color:var(--navy)}
   // Ad
   $('adspend').innerHTML = money(D.adSpend) + ' <small>of ' + money(D.adBudget) + '</small>';
   $('admeter').style.width = Math.min(100, (D.adSpend||0)/(D.adBudget||1)*100) + '%';
-  $('adbudget').textContent = 'Runs through Friday, October 30';
+  $('adbudget').textContent = D.adRunsThrough || '';
   $('adcpv').textContent = money(D.adCostPerVisit, 2);
   $('adreach').textContent = n(D.adReach);
 
