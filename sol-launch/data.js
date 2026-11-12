@@ -1,11 +1,12 @@
 // Spark of Life · The Living Forward Course launch dashboard
 // Update these numbers, then push. Everything on the page reads from here.
 window.LF = {
-  updated: "Friday, November 6 at 5:15 p.m. Eastern. Email results are from Thursday, November 5 at 7:46 a.m.",
-  eyebrow: "Launch Extended",
+  updated: "Thursday, November 12 at 11:40 a.m. Eastern. Email results are from Thursday, November 5 at 7:46 a.m.",
+  eyebrow: "Launch Results",
 
   // Purchases (GHL Payments > Transactions, "Living Forward: Finding Hope After Loss")
-  price: 99,
+  price: 99,          // $99 launch price, Oct 24 to Nov 6
+  laterPrice: 199,    // regular price since Sat Nov 7 (days marked price: 199)
   // One entry per launch day. count = enrollments that day (Central time).
   // upcoming: true shows the day as still ahead.
   salesByDay: [
@@ -22,7 +23,13 @@ window.LF = {
     { day: "Tue", date: "Nov 3", count: 1 },
     { day: "Wed", date: "Nov 4", count: 2 },
     { day: "Thu", date: "Nov 5", count: 9 },
-    { day: "Fri", date: "Nov 6", count: 5, today: true }
+    { day: "Fri", date: "Nov 6", count: 8 },
+    { day: "Sat", date: "Nov 7", count: 1, price: 199 },
+    { day: "Sun", date: "Nov 8", count: 0, price: 199 },
+    { day: "Mon", date: "Nov 9", count: 0, price: 199 },
+    { day: "Tue", date: "Nov 10", count: 0, price: 199 },
+    { day: "Wed", date: "Nov 11", count: 0, price: 199 },
+    { day: "Thu", date: "Nov 12", count: 0, price: 199, today: true }
   ],
   // Where enrollments came from (GHL contact record: on the list before buying, or new)
   fromEmailList: 15,
@@ -47,12 +54,12 @@ window.LF = {
   emailsStillToCome: "results for Thursday's and Friday's emails",
 
   // Meta ad (Ads Manager > campaign "SOL - Living Forward Course Launch - Oct 2026" > ad set)
-  adSpend: 611.14,
+  adSpend: 649.11,
   adBudget: 650,
-  adVisits: 1861,         // Results: Landing Page Views
-  adReach: 45850,         // Reach
-  adCostPerVisit: 0.33,   // Cost per result
-  adRunsThrough: "Runs through Friday, November 6",
+  adVisits: 2095,         // Results: Landing Page Views
+  adReach: 47901,         // Reach
+  adCostPerVisit: 0.31,   // Cost per result
+  adRunsThrough: "Ran through Friday, November 6",
   adPreview: "previews/ad-v5.jpg",
 
   // Sale ends Friday, October 30 at 11:59 p.m. Eastern

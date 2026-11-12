@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>The Living Forward Course · Launch Week</title>
+<title>The Living Forward Course · Launch Results</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
@@ -132,7 +132,7 @@ footer b{color:var(--navy)}
 <div class="wrap">
   <header>
     <div class="logo"><img src="../sol-course-page/assets/logo.png" alt="Spark of Life"></div>
-    <div class="eyebrow">Launch Extended</div>
+    <div class="eyebrow" id="eyebrow">Launch Results</div>
     <h1>The Living Forward Course<span>Launch at a Glance</span></h1>
   </header>
 
@@ -145,12 +145,12 @@ footer b{color:var(--navy)}
     <div class="m">
       <div class="label">Course Sales</div>
       <div class="big" id="revenue">-</div>
-      <div class="sub">At the $99 launch price</div>
+      <div class="sub" id="revsub">At the $99 launch price</div>
     </div>
     <div class="m">
       <div class="label">Course Page Visits</div>
       <div class="big" id="advisits">-</div>
-      <div class="sub">From the Facebook and Instagram ad</div>
+      <div class="sub">From the Facebook and Instagram launch ad</div>
     </div>
   </section>
 
@@ -183,7 +183,8 @@ footer b{color:var(--navy)}
       <ul class="learn" style="margin-top:12px">
         <li>Women 55 and over are the largest group visiting the course page from the ad.</li>
         <li>Short videos (Reels) on Facebook and Instagram bring in nearly all of the visits.</li>
-        <li>The ad was extended on Tuesday, November 3 with $400 more, to reach new people before the $99 price ends Friday night.</li>
+        <li>The ad was extended on Tuesday, November 3 with $400 more, and ran until the $99 launch price ended Friday night, November 6.</li>
+        <li>A new ad for the course at $199 started on Saturday, November 7.</li>
       </ul>
     </div>
   </section>
@@ -201,6 +202,7 @@ footer b{color:var(--navy)}
   <section class="card">
     <div class="bars" id="bars"></div>
     <div class="days" id="days"></div>
+    <p class="note">The $99 launch price ended Friday, November 6. The course has been $199 since Saturday, November 7.</p>
   </section>
 
   <h2 class="section">Launch Emails <span id="emailsub">-</span></h2>
@@ -227,7 +229,11 @@ footer b{color:var(--navy)}
   var days = D.salesByDay || [];
   var total = days.reduce(function(s,d){ return s + (d.count||0); }, 0);
   $('enrollments').textContent = n(total);
-  $('revenue').textContent = money(total * (D.price||99));
+  var revTotal = 0, launchN = 0, laterN = 0;
+  days.forEach(function(d){ var c = d.count||0, pr = d.price || D.price || 99; revTotal += c * pr; if (d.price && d.price !== D.price) laterN += c; else launchN += c; });
+  $('revenue').textContent = money(revTotal);
+  if (laterN) $('revsub').textContent = n(launchN) + ' at the $' + (D.price||99) + ' launch price, ' + n(laterN) + ' at $' + (D.laterPrice||199);
+  if (D.eyebrow) $('eyebrow').textContent = D.eyebrow;
   $('advisits').textContent = n(D.adVisits);
 
   // Where enrollments came from
