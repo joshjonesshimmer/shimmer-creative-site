@@ -1,0 +1,268 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500;1,7..72,600&family=Karla:wght@400;500;600;700&display=swap');
+#lf-page{font-family:'Karla',system-ui,-apple-system,'Segoe UI',sans-serif;color:#16233F;background:#FCFAF7;line-height:1.5;text-align:left;-webkit-font-smoothing:antialiased}
+#lf-page *{box-sizing:border-box}
+#lf-page h1,#lf-page h2,#lf-page h3,#lf-page p,#lf-page ul,#lf-page li{margin:0;padding:0}
+#lf-page img{display:block;max-width:100%}
+#lf-page a{text-decoration:none}
+#lf-page .lf-sec{padding:96px 64px}
+#lf-page .lf-in{max-width:1152px;margin:0 auto}
+#lf-page .lf-cream{background:#F0E3D6}
+#lf-page .lf-white{background:#FFFFFF;border-bottom:1px solid #EDE4DA}
+#lf-page .lf-eyebrow{font-size:13px;letter-spacing:.04em;color:#C96A1C;font-weight:700}
+#lf-page .lf-h1{font-family:'Literata',Georgia,serif;font-weight:700;font-size:50px;line-height:1.06;letter-spacing:-.02em;color:#16233F}
+#lf-page .lf-h1 em{font-style:italic;font-weight:500;color:#C96A1C}
+#lf-page .lf-h2{font-family:'Literata',Georgia,serif;font-weight:700;font-size:32px;line-height:1.1;letter-spacing:-.015em;color:#16233F}
+#lf-page .lf-lead{font-size:18px;line-height:1.55;color:#5B6579;max-width:46ch}
+#lf-page .lf-btn{display:inline-flex;align-items:center;justify-content:center;background:#C96A1C;color:#FFFFFF;padding:12px 24px;min-height:48px;border-radius:6px;font-size:16px;font-weight:700;letter-spacing:.01em;line-height:1.25;text-align:center;border:0;cursor:pointer;font-family:inherit}
+#lf-page .lf-btn:hover,#lf-page .lf-btn:focus{background:#A8560F;color:#FFFFFF}
+#lf-page .lf-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.55);color:#FFFFFF}
+#lf-page .lf-btn-ghost:hover,#lf-page .lf-btn-ghost:focus{background:rgba(255,255,255,.12);color:#FFFFFF}
+#lf-page .lf-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+#lf-page .lf-note{font-size:13.5px;line-height:1.45;color:#5B6579;max-width:40ch}
+#lf-page .lf-note-light{color:rgba(255,255,255,.82)}
+#lf-page .lf-banner{background:#16233F;color:#FFFFFF;padding:28px 64px}
+#lf-page .lf-banner-in{max-width:1152px;margin:0 auto;display:flex;gap:32px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+#lf-page .lf-banner-h{font-family:'Literata',Georgia,serif;font-size:24px;line-height:1.2;font-weight:700}
+#lf-page .lf-hero-video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 20px 48px rgba(22,35,63,.18)}
+#lf-page .lf-hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#lf-page .lf-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(22,35,63,.18)}
+#lf-page .lf-play-dot{width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center}
+#lf-page .lf-vbadge{position:absolute;left:16px;top:14px;background:rgba(22,35,63,.85);color:#FFFFFF;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:6px 10px;border-radius:4px}
+#lf-page .lf-guar{display:inline-flex;gap:8px;align-items:center;padding:12px 14px;background:#E4EFEB;border-radius:8px;font-size:14px;color:#33605A;font-weight:600}
+#lf-page .lf-step-n{width:34px;height:34px;border-radius:50%;background:#16233F;color:#FFFFFF;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+#lf-page .lf-step-t{font-family:'Literata',Georgia,serif;font-size:17px;font-weight:600;color:#16233F}
+#lf-page .lf-step-d{font-size:14px;line-height:1.5;color:#5A4A3A}
+
+/* homepage sections, built on the course page system and the Sept 15 design */
+#lf-page .lf-hh{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:#16233F}
+#lf-page .lf-hh-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+#lf-page .lf-hh-scrim{position:absolute;inset:0;background:linear-gradient(96deg,rgba(22,35,63,.90) 0%,rgba(22,35,63,.68) 44%,rgba(22,35,63,.10) 100%)}
+#lf-page .lf-hh-txt{position:relative;padding:96px 64px;max-width:1152px;margin:0 auto;width:100%}
+#lf-page .lf-hh-txt>div{max-width:600px;display:flex;flex-direction:column;gap:20px}
+#lf-page .lf-hh .lf-h1{color:#FFFFFF}
+#lf-page .lf-hh .lf-h1 em{color:#F3C08A}
+#lf-page .lf-hh .lf-lead{color:rgba(255,255,255,.9)}
+#lf-page .lf-hh-link{color:#FFFFFF;font-size:15px;font-weight:600;text-decoration:underline!important;text-underline-offset:3px}
+#lf-page .lf-strip{background:#F0E3D6;padding:28px 64px}
+#lf-page .lf-strip-in{max-width:1152px;margin:0 auto;text-align:center;font-family:'Literata',Georgia,serif;font-size:22px;line-height:1.4;font-weight:600;color:#16233F}
+#lf-page .lf-strip b{display:block;font-family:'Literata',Georgia,serif;font-size:32px;line-height:1.05;color:#16233F;font-weight:700}
+#lf-page .lf-strip span{display:block;margin-top:6px;font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#7A6752;font-weight:700}
+#lf-page .lf-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+#lf-page .lf-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#lf-page .lf-pcard{display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #EDE4DA;border-radius:10px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+#lf-page .lf-pcard:hover{border-color:#C96A1C;box-shadow:0 14px 30px rgba(22,35,63,.18)}
+#lf-page .lf-pcard-img{height:200px;position:relative;overflow:hidden;background:#DDD8D2}
+#lf-page .lf-pcard-img img{width:100%;height:100%;object-fit:cover}
+#lf-page .lf-pcard-b{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+#lf-page .lf-pcard-q{font-family:'Literata',Georgia,serif;font-style:normal;font-weight:600;font-size:18px;line-height:1.3;color:#16233F;font-weight:500}
+#lf-page .lf-pcard-t{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#33605A;font-weight:700}
+#lf-page .lf-pcard-d{font-size:15px;line-height:1.5;color:#5B6579;flex:1}
+#lf-page .lf-lk{font-size:15px;font-weight:700;color:#C96A1C;margin-top:6px;text-decoration:underline;text-underline-offset:3px}
+#lf-page .lf-unsure{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#F0E3D6;border-radius:10px;padding:24px 28px}
+#lf-page .lf-unsure .lf-pcard-q{font-size:20px}
+#lf-page .lf-quote{background:#16233F;color:#FFFFFF;padding:64px}
+#lf-page .lf-quote-in{max-width:900px;margin:0 auto;display:flex;gap:32px;align-items:center}
+#lf-page .lf-quote-ph{width:96px;height:96px;border-radius:50%;overflow:hidden;flex:0 0 auto;border:3px solid #C96A1C}
+#lf-page .lf-quote-ph img{width:100%;height:100%;object-fit:cover}
+#lf-page .lf-quote q{display:block;font-family:'Literata',Georgia,serif;font-style:italic;font-size:24px;line-height:1.4;margin-bottom:12px}
+#lf-page .lf-quote small{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#F3C08A;font-weight:700}
+#lf-page .lf-2col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+#lf-page .lf-checks{list-style:none;display:flex;flex-direction:column;gap:12px}
+#lf-page .lf-checks li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45;color:#16233F}
+#lf-page .lf-checks li:before{content:"";flex:0 0 auto;width:20px;height:20px;margin-top:1px;border-radius:50%;background:#C96A1C url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+#lf-page .lf-col{display:flex;flex-direction:column;gap:22px}
+#lf-page .lf-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#lf-page .lf-step{display:flex;gap:14px;align-items:flex-start;background:#FFFFFF;border:1px solid #EDE4DA;border-radius:10px;padding:22px 20px}
+#lf-page .lf-step>div{display:flex;flex-direction:column;gap:6px}
+#lf-page .lf-founders{display:grid;grid-template-columns:440px minmax(0,1fr);gap:56px;align-items:center}
+#lf-page .lf-founders-ph{aspect-ratio:720/614;border-radius:12px;overflow:hidden;box-shadow:0 20px 48px rgba(22,35,63,.18)}
+#lf-page .lf-founders-ph img{width:100%;height:100%;object-fit:cover}
+#lf-page .lf-tlink{color:#C96A1C;font-weight:700;font-size:16px;text-decoration:underline!important;text-underline-offset:3px}
+#lf-page .lf-tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#lf-page .lf-test{background:#FFFFFF;border:1px solid #EDE4DA;border-radius:14px;padding:32px;box-shadow:0 16px 40px rgba(22,35,63,.10);display:flex;flex-direction:column;gap:14px}
+#lf-page .lf-test q{font-family:'Literata',Georgia,serif;font-style:italic;font-size:19px;line-height:1.45;color:#16233F}
+#lf-page .lf-test small{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#C96A1C;font-weight:700}
+#lf-page .lf-form{display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #EDE4DA;border-radius:14px;padding:32px;box-shadow:0 16px 40px rgba(22,35,63,.10)}
+#lf-page .lf-form label{font-size:13px;font-weight:700;color:#16233F;letter-spacing:.02em}
+#lf-page .lf-form input{width:100%;min-height:48px;padding:12px 14px;border:1px solid #DCCFC0;border-radius:6px;font-size:16px;font-family:inherit;color:#16233F;background:#FCFAF7}
+#lf-page .lf-form input:focus{outline:2px solid #C96A1C;outline-offset:1px}
+#lf-page .lf-guide-art{background:#F0E3D6;border-radius:14px;padding:56px 32px;display:flex;justify-content:center;align-items:center}
+#lf-page .lf-guide-art img{width:100%;max-width:300px;height:auto;border-radius:4px;box-shadow:0 26px 50px rgba(22,35,63,.28),0 4px 12px rgba(22,35,63,.12);transform:rotate(-2deg)}
+#lf-page .lf-form-embed{padding:24px 24px 8px}
+#lf-page .lf-form-embed iframe{display:block;width:100%;min-height:270px;border:0}
+#lf-page .lf-guide-alt{font-size:16px;color:#5B6579}
+#lf-page .lf-close{text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px}
+#lf-page .lf-988{background:#FCFAF7;padding:24px 64px;text-align:center;font-size:15px;color:#5B6579;border-top:1px solid #EDE4DA}
+#lf-page .lf-988 a{color:#16233F;font-weight:700;text-decoration:underline!important}
+@media (max-width:1023px){
+  #lf-page .lf-cards,#lf-page .lf-steps,#lf-page .lf-tests{grid-template-columns:minmax(0,1fr)}
+  #lf-page .lf-2col,#lf-page .lf-founders{grid-template-columns:minmax(0,1fr);gap:32px}
+  #lf-page .lf-founders-ph{max-width:440px}
+}
+@media (max-width:767px){
+  #lf-page .lf-sec{padding:56px 20px}
+  #lf-page .lf-banner{padding:24px 20px}
+  #lf-page .lf-h1{font-size:34px;line-height:1.08}
+  #lf-page .lf-h2{font-size:24px;line-height:1.12}
+  #lf-page .lf-lead{font-size:16px;max-width:none}
+  #lf-page .lf-cta{flex-direction:column;align-items:stretch;gap:12px}
+  #lf-page .lf-btn{width:100%;min-height:52px;font-size:15px}
+  #lf-page .lf-hh{min-height:520px}
+  #lf-page .lf-hh-txt{padding:56px 20px}
+  #lf-page .lf-hh-scrim{background:linear-gradient(180deg,rgba(22,35,63,.55) 0%,rgba(22,35,63,.88) 60%,rgba(22,35,63,.94) 100%)}
+  #lf-page .lf-strip{padding:24px 20px}
+  #lf-page .lf-strip-in{font-size:18px}
+  #lf-page .lf-head{margin-bottom:28px}
+  #lf-page .lf-pcard-img{height:180px}
+  #lf-page .lf-unsure{flex-direction:column;align-items:stretch;padding:22px 20px}
+  #lf-page .lf-quote{padding:48px 20px}
+  #lf-page .lf-quote-in{flex-direction:column;text-align:center;gap:20px}
+  #lf-page .lf-quote q{font-size:20px}
+  #lf-page .lf-tests{grid-template-columns:minmax(0,1fr)}
+  #lf-page .lf-test,#lf-page .lf-form{padding:24px 20px}
+  #lf-page .lf-play-dot{width:84px;height:84px}
+  #lf-page .lf-988{padding:20px}
+  #lf-page .lf-guide-art{padding:36px 24px}
+  #lf-page .lf-guide-art img{max-width:220px}
+}
+</style>
+<div id="lf-page" class="lf-home">
+
+  <!-- Hero: photo with navy scrim (Sept 15 design) -->
+  <section class="lf-hh">
+    <img class="lf-hh-img" src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1600/u_https://assets.cdn.filesafe.space/m8conTrT2FpouIK4RNkB/media/6852c9931a0e2e27577c5cc0.jpeg" alt="Four friends arm in arm, watching the sunrise">
+    <div class="lf-hh-scrim"></div>
+    <div class="lf-hh-txt"><div>
+      <h1 class="lf-h1">Grief doesn't end.<br><em>It changes shape.</em></h1>
+      <p class="lf-lead">And you can learn to live forward with it. We'll walk beside you.</p>
+      <div class="lf-cta">
+        <a class="lf-btn" href="/courses">Start The Living Forward Course</a>
+      </div>
+      <p class="lf-note lf-note-light">Online grief course · 12 video lessons with David Mathews · $199 · Lifetime access</p>
+      <a class="lf-hh-link" href="#lf-paths">Not sure where to start? Find your path.</a>
+    </div></div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="lf-strip"><div class="lf-strip-in">
+    <p>Since 2009 · Over 150 retreats · Over 100 church workshops · 10,000+ people helped</p>
+  </div></section>
+
+  <!-- Which path is right for me? -->
+  <section class="lf-sec" id="lf-paths"><div class="lf-in">
+    <div class="lf-head">
+      
+      <h2 class="lf-h2">Which path is right for me?</h2>
+      <p class="lf-lead">There's no wrong door. Pick the one that sounds most like you.</p>
+    </div>
+    <div class="lf-cards">
+      <a class="lf-pcard" href="/courses">
+        <div class="lf-pcard-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/m8conTrT2FpouIK4RNkB/media/686e2e283e1a2539f97c0574.png" alt="A man with his head bowed and hands clasped"></div>
+        <div class="lf-pcard-b">
+          <p class="lf-pcard-q">I want to heal at my own pace, at home.</p>
+          <p class="lf-pcard-d">The Living Forward Course. Twelve video lessons with David, whenever you're ready.</p>
+          <span class="lf-lk">Start the Course</span>
+        </div>
+      </a>
+      <a class="lf-pcard" href="/retreats">
+        <div class="lf-pcard-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/m8conTrT2FpouIK4RNkB/media/68404df527491509eea28e15.jpeg" alt="Two people embracing at a Spark of Life retreat"></div>
+        <div class="lf-pcard-b">
+          <p class="lf-pcard-q">I want to get away and heal with others.</p>
+          <p class="lf-pcard-d">A 3½-day grief retreat with about 16 people, in person or online.</p>
+          <span class="lf-lk">See Retreats</span>
+        </div>
+      </a>
+      <a class="lf-pcard" href="/coaching">
+        <div class="lf-pcard-img"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/m8conTrT2FpouIK4RNkB/media/685310ea2a85565499b49138.webp" alt="A small group talking together in a living room"></div>
+        <div class="lf-pcard-b">
+          <p class="lf-pcard-q">I want someone to walk with me one-on-one.</p>
+          <p class="lf-pcard-d">Coaching with a certified grief coach who has walked this road too.</p>
+          <span class="lf-lk">Meet Our Coaches</span>
+        </div>
+      </a>
+    </div>
+    <div class="lf-unsure">
+      <div>
+        <p class="lf-pcard-q">I don't know yet.</p>
+        <p class="lf-pcard-d" style="margin-top:6px">That's okay. Call or text us and we'll help you choose.</p>
+      </div>
+      <a class="lf-btn" href="/contact">Talk With Us</a>
+    </div>
+  </div></section>
+
+  <!-- Course section -->
+  <section class="lf-sec lf-white"><div class="lf-in lf-2col">
+    <div class="lf-col">
+      <p class="lf-eyebrow">Online grief course</p>
+      <h2 class="lf-h2">Hope you can start tonight</h2>
+      <p class="lf-lead">The Living Forward Course brings the heart of a Spark of Life retreat to your home. Each lesson ends with one simple step.</p>
+      <ul class="lf-checks">
+        <li>12 video lessons with David Mathews</li>
+        <li>A 60-page workbook</li>
+        <li>Lifetime access, on your phone, tablet or computer</li>
+        <li>30-day money-back guarantee</li>
+      </ul>
+      <div class="lf-cta"><a class="lf-btn" href="/courses">Start The Living Forward Course</a></div>
+      <p class="lf-note">So many of you have asked for a way to experience Spark of Life from home. This is it.</p>
+    </div>
+    <div class="lf-hero-video">
+      <video id="lf-home-vid" src="https://assets.cdn.filesafe.space/m8conTrT2FpouIK4RNkB/media/686e31123e1a254c607c0856.mp4" poster="https://unleashyourshimmer.com/sol-course-page/assets/poster.jpg" preload="metadata" playsinline controls></video>
+      <div class="lf-play" onclick="var v=document.getElementById('lf-home-vid');this.style.display='none';if(v){v.play();}"><div class="lf-play-dot"><svg width="52" height="52" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true" style="margin-left:6px"><path d="M8 5v14l11-7z"></path></svg></div></div>
+    </div>
+  </div></section>
+
+  <!-- Three steps forward -->
+  <section class="lf-sec lf-cream"><div class="lf-in">
+    <div class="lf-head"><h2 class="lf-h2">Three steps forward</h2></div>
+    <div class="lf-steps">
+      <div class="lf-step"><span class="lf-step-n">1</span><div><p class="lf-step-t">Reach out.</p><p class="lf-step-d">Choose a course, a retreat or a coach. Or just call us.</p></div></div>
+      <div class="lf-step"><span class="lf-step-n">2</span><div><p class="lf-step-t">We walk beside you.</p><p class="lf-step-d">You'll have people who understand, every step of the way.</p></div></div>
+      <div class="lf-step"><span class="lf-step-n">3</span><div><p class="lf-step-t">You live forward.</p><p class="lf-step-d">Life won't be the same, but it can be full again.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- We know this road -->
+  <section class="lf-sec"><div class="lf-in lf-founders">
+    <div class="lf-founders-ph"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://files.leadconnectorhq.com/file/6af52664bd36322ae247c4f7/debbie-and-david-park.jpg" alt="David and Debbie Mathews, co-founders of Spark of Life"></div>
+    <div class="lf-col">
+      
+      <h2 class="lf-h2">We know this road</h2>
+      <p class="lf-lead" style="max-width:56ch">David and Debbie Mathews started Spark of Life in 2009 out of their personal losses. Since then, they've walked beside more than 10,000 grieving people from 46 states and around the world.</p>
+      <a class="lf-tlink" href="/about">Read Our Story</a>
+    </div>
+  </div></section>
+
+  <!-- You're not the only one -->
+  <section class="lf-sec lf-cream"><div class="lf-in">
+    <div class="lf-head"><h2 class="lf-h2">You're not the only one</h2></div>
+    <div class="lf-tests">
+      <div class="lf-test"><q>One of the greatest gifts I received on my grief journey was being able to attend one of your retreats in Jefferson. I am so grateful for the Living Forward philosophy I took away from your retreat, and the huge weight that lifted off my shoulders.</q><small>Lauren</small></div>
+      <div class="lf-test"><q>Thank you so much for the opportunity to come to Spark of Life #96. It was an amazing experience for me that I will cherish.</q><small>Melissa</small></div>
+      <div class="lf-test"><q>It has been a life saving experience for me after the loss of my husband. The tools that were given were helpful to me during the retreat and will continue to help me move forward in my life journey.</q><small>Clara</small></div>
+    </div>
+  </div></section>
+
+  <!-- Free guide -->
+  <section class="lf-sec lf-white"><div class="lf-in lf-2col">
+    <div class="lf-guide-art"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://files.leadconnectorhq.com/file/6af52664ddcd97ce5ae68add/why-grief-comes-in-waves-cover.jpg" alt="Cover of the free guide Why Grief Comes in Waves" loading="lazy"></div>
+    <div class="lf-col">
+      <h2 class="lf-h2">Why does grief come in waves?</h2>
+      <p class="lf-lead">Gentle answers to the questions you're asking, plus what to do when a wave rolls in. Our free guide, <em>Why Grief Comes in Waves</em>, is yours to keep.</p>
+      <div class="lf-form lf-form-embed">
+        <iframe src="https://api.renandadele.com/widget/form/hs42Abjoq3VyG65VdIXA" style="width:100%;height:100%;border:none;border-radius:8px" id="inline-hs42Abjoq3VyG65VdIXA" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Free Guide: Why Grief Comes in Waves" data-height="270" data-layout-iframe-id="inline-hs42Abjoq3VyG65VdIXA" data-form-id="hs42Abjoq3VyG65VdIXA" title="Free Guide: Why Grief Comes in Waves"></iframe>
+      </div>
+      <p class="lf-guide-alt">Here for someone else? <a class="lf-tlink" href="/help-someone">More ways to help someone you love</a></p>
+    </div>
+  </div></section>
+  <script src="https://api.renandadele.com/js/form_embed.js"></script>
+
+  <!-- Closing band -->
+  <section class="lf-sec" style="background:#16233F"><div class="lf-in lf-close">
+    <h2 class="lf-h2" style="color:#FFFFFF">Your next step can be a small one</h2>
+    <a class="lf-btn" href="/courses">Start The Living Forward Course</a>
+  </div></section>
+
+  <!-- Gentle line -->
+  <p class="lf-988">If your grief feels like more than you can carry today, you can <a href="tel:988">call or text 988</a> any time.</p>
+</div>
