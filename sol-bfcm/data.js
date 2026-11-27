@@ -1,7 +1,7 @@
 // Spark of Life · The Living Forward Course holiday sale dashboard (Black Friday to Cyber Monday)
 // Update these numbers, then push. Everything on the page reads from here.
 window.SALE = {
-  updated: "Friday, November 27 at 10:00 a.m. Eastern",
+  updated: "Friday, November 27 at 10:15 a.m. Eastern",
   eyebrow: "Black Friday to Cyber Monday",
 
   // Sale details
