@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Living Forward Course · Holiday Sale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16233F; --orange:#C96A1C; --orange-lt:#E9C9A8;
+  --cream:#F0E3D6; --sand:#EDE4DA; --paper:#FCFAF7; --line:#E3D8CC;
+  --teal:#33605A; --mint:#E4EFEB; --slate:#5B6579; --gold:#F3C08A;
+  --serif:'Literata',Georgia,serif; --sans:'Karla',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--navy);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.4}
+.wrap{max-width:1040px;margin:0 auto;padding:40px 24px 56px}
+header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;margin-bottom:36px}
+.logo{background:#fff;border-radius:8px;padding:10px 14px;line-height:0}
+.logo img{height:52px;width:auto}
+.eyebrow{font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--orange)}
+h1{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--orange);font-size:clamp(40px,7vw,68px);line-height:1.05}
+h1 span{display:block;font-style:normal;font-weight:700;color:var(--navy);font-size:.62em;margin-top:6px}
+
+.hero{background:var(--navy);color:var(--paper);border-radius:18px;padding:34px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;box-shadow:0 14px 34px rgba(22,35,63,.18)}
+.hero .m{padding:4px 10px}
+.hero .m + .m{border-left:1px solid rgba(252,250,247,.18)}
+.hero .label{font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.hero .big{font-family:var(--serif);font-weight:700;font-size:clamp(48px,8vw,84px);line-height:1.08;margin:8px 0 6px}
+.hero .sub{font-size:17px;color:#DCCFC0}
+
+/* Preview links */
+.pv-link{font:inherit;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.02em;color:var(--orange);background:none;border:0;border-bottom:1.5px dotted var(--orange);padding:0;cursor:pointer;margin-left:10px;vertical-align:1px}
+.pv-link:hover,.pv-link:focus-visible{color:var(--navy);border-bottom-color:var(--navy);outline:none}
+h2.section .pv-link{margin:0;font-size:16px}
+#pv{position:fixed;z-index:50;display:none;background:#fff;border-radius:12px;padding:8px;box-shadow:0 18px 48px rgba(22,35,63,.28);pointer-events:none}
+#pv img{display:block;width:320px;height:auto;max-height:70vh;object-fit:cover;object-position:top;border-radius:8px}
+#pv.show{display:block}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--paper);border-radius:18px;padding:28px 26px 26px;box-shadow:0 10px 26px rgba(22,35,63,.08);display:flex;flex-direction:column;gap:6px}
+.card .k{font-weight:700;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.card .v{font-family:var(--serif);font-weight:700;font-size:clamp(52px,8vw,80px);line-height:1.02;color:var(--navy)}
+.card .v.orange{color:var(--orange)}
+.card .v small{font-size:.42em;font-weight:600;color:var(--slate)}
+.card .d{font-size:18px;color:var(--slate)}
+.card .d b{color:var(--navy)}
+.card.wide{grid-column:1 / -1}
+
+h2.section{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4vw,38px);color:var(--navy);text-align:center;margin:44px 0 20px}
+h2.section span{display:block;font-family:var(--sans);font-weight:600;font-size:17px;letter-spacing:.02em;color:var(--slate);margin-top:6px}
+
+/* Where enrollments came from */
+.split{display:flex;height:22px;border-radius:999px;overflow:hidden;gap:2px;background:var(--paper);margin:14px 0 16px}
+.split div{height:100%}
+.split .a{background:var(--navy)}
+.split .b{background:var(--orange)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:18px;color:var(--slate)}
+.legend b{color:var(--navy);font-family:var(--serif);font-size:28px;margin-right:4px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:1px}
+
+/* Enrollments by day */
+.bars{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end;height:240px;padding-top:30px;border-bottom:1px solid var(--line)}
+.bar{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.bar .fill{width:min(44px,70%);background:var(--orange);border-radius:4px 4px 0 0;min-height:3px}
+.bar.upcoming .fill{background:transparent;border:2px dashed var(--orange-lt);border-bottom:none;height:40px !important}
+.bar .num{font-family:var(--serif);font-weight:700;font-size:24px;color:var(--navy);margin-bottom:6px}
+.bar.upcoming .num{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--slate)}
+.bar .tip{position:absolute;top:-6px;left:50%;transform:translate(-50%,-100%);background:var(--navy);color:var(--paper);font-size:14px;padding:6px 10px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s}
+.bar:hover .tip,.bar:focus .tip{opacity:1}
+.bar:nth-child(-n+2) .tip{left:0;transform:translateY(-100%)}
+.bar:nth-last-child(-n+2) .tip{left:auto;right:0;transform:translateY(-100%)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:10px;text-align:center}
+.days div{font-weight:700;font-size:15px;color:var(--navy)}
+.days span{display:block;font-weight:400;font-size:13px;color:var(--slate)}
+.days .today{color:var(--orange)}
+
+/* Emails */
+table.em{width:100%;border-collapse:collapse;font-size:17px}
+table.em th{text-align:left;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);padding:0 10px 12px;border-bottom:1px solid var(--line)}
+table.em td{padding:14px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.em tr:last-child td{border-bottom:none}
+table.em .n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.em th.n{text-align:right}
+table.em .subj{font-weight:700;color:var(--navy)}
+table.em .when{display:block;font-size:14px;color:var(--slate);margin-top:2px}
+.rate{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.rate .track{width:90px;height:8px;background:var(--sand);border-radius:999px;overflow:hidden}
+.rate .track div{height:100%;background:var(--navy);border-radius:999px}
+.note{font-size:15px;color:var(--slate);margin-top:14px}
+.tag{display:inline-block;margin-left:8px;background:var(--mint);color:var(--teal);font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;vertical-align:2px}
+
+/* Ad */
+.meter{height:14px;background:var(--sand);border-radius:999px;overflow:hidden;margin:12px 0 8px}
+.meter div{height:100%;background:var(--orange);border-radius:999px}
+ul.learn{list-style:none;display:flex;flex-direction:column;gap:14px;font-size:19px;color:var(--navy)}
+ul.learn li{padding-left:30px;position:relative}
+ul.learn li::before{content:"";position:absolute;left:4px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--orange)}
+
+footer{text-align:center;margin-top:36px;color:var(--slate);font-size:16px}
+footer b{color:var(--navy)}
+
+@media (max-width:820px){
+  .grid.three{grid-template-columns:1fr 1fr}
+  .grid.three .card:last-child{grid-column:1 / -1}
+}
+@media (max-width:720px){
+  .wrap{padding:28px 16px 44px}
+  .grid,.grid.three{grid-template-columns:1fr;gap:16px}
+  .hero{grid-template-columns:1fr;padding:22px 18px;gap:0}
+  .hero .m{padding:14px 0}
+  .hero .m + .m{border-left:0;border-top:1px solid rgba(252,250,247,.18)}
+  #pv img{width:min(78vw,320px)}
+  .card{padding:22px 18px}
+  .logo img{height:44px}
+  .bars{gap:6px;height:200px}
+  .days{gap:6px}
+  .days span{font-size:11px}
+  .bar .num{font-size:20px}
+  table.em{font-size:15px}
+  table.em .hide-sm{display:none}
+  .rate .track{display:none}
+  ul.learn{font-size:17px}
+}
+
+/* Sale count with total beside it */
+.hero .big.with-total{display:flex;align-items:center;justify-content:center;gap:18px}
+.hero .total{font-family:var(--sans);font-size:15px;font-weight:600;line-height:1.2;color:#DCCFC0;text-align:left;padding-left:16px;border-left:1px solid rgba(252,250,247,.25)}
+.hero .total b{display:block;font-family:var(--serif);font-size:34px;font-weight:700;color:var(--paper);line-height:1.05}
+
+/* Sale strip */
+.strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;background:var(--paper);border-radius:14px;padding:16px 22px;margin:22px 0 0;box-shadow:0 10px 26px rgba(22,35,63,.08);font-size:17px;color:var(--slate)}
+.strip b{color:var(--navy)}
+.strip .code{font-weight:700;letter-spacing:.08em;color:var(--orange)}
+.strip s{color:var(--slate)}
+.strip .left{font-weight:700;color:var(--orange)}
+@media (max-width:720px){ .strip{flex-direction:column;align-items:flex-start;font-size:16px} .hero .total b{font-size:30px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="../sol-course-page/assets/logo.png" alt="Spark of Life"></div>
+    <div class="eyebrow" id="eyebrow">Black Friday to Cyber Monday</div>
+    <h1>The Living Forward Course<span>Holiday Sale at a Glance</span></h1>
+  </header>
+
+  <section class="hero">
+    <div class="m">
+      <div class="label">Courses Sold This Sale</div>
+      <div class="big with-total"><span id="salecount">-</span><span class="total"><b id="alltotal">-</b>total sold</span></div>
+      <div class="sub">Since the sale began Thursday</div>
+    </div>
+    <div class="m">
+      <div class="label">Sale Revenue</div>
+      <div class="big" id="revenue">-</div>
+      <div class="sub" id="revsub">At the $99 sale price</div>
+    </div>
+    <div class="m">
+      <div class="label">Course Page Visits</div>
+      <div class="big" id="advisits">-</div>
+      <div class="sub">From the Black Friday ads</div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div>Code <span class="code" id="code">-</span> &middot; <s id="regprice">-</s> <b id="saleprice">-</b> &middot; Ends <b id="ends">-</b></div>
+    <div class="left" id="countdown"></div>
+  </div>
+
+  <h2 class="section">Courses Sold by Day</h2>
+  <section class="card">
+    <div class="bars" id="bars"></div>
+    <div class="days" id="days"></div>
+    <p class="note">The sale began Thursday, November 26 at 5 p.m. Eastern.</p>
+  </section>
+
+  <h2 class="section">Facebook &amp; Instagram Ads <span><button class="pv-link" type="button" data-pv="" id="adpv">Preview the ad</button></span></h2>
+  <section class="grid">
+    <div class="card">
+      <div class="k">Ad Budget Used</div>
+      <div class="v" id="adspend">-</div>
+      <div class="meter"><div id="admeter"></div></div>
+      <div class="d" id="adbudget">-</div>
+    </div>
+    <div class="card">
+      <div class="k">Cost per Course Page Visit</div>
+      <div class="v orange" id="adcpv">-</div>
+      <div class="d">The ads have been seen by <b id="adreach">-</b> people</div>
+    </div>
+    <div class="card wide">
+      <div class="k">How the Ads Work</div>
+      <ul class="learn" style="margin-top:12px">
+        <li>Two ads are running: &ldquo;$100 Off This Weekend&rdquo; and &ldquo;A Gift of Hope.&rdquo;</li>
+        <li>They reach people who already know Spark of Life, and people who are new to it.</li>
+        <li id="warmup">-</li>
+      </ul>
+    </div>
+  </section>
+
+  <h2 class="section">Sale Emails <span id="emailsub">-</span></h2>
+  <section class="card">
+    <table class="em">
+      <thead><tr><th>Email</th><th class="n hide-sm">Reached</th><th class="n">Opened</th><th class="n">Clicked</th></tr></thead>
+      <tbody id="emrows"></tbody>
+    </table>
+    <p class="note" id="emnote"></p>
+  </section>
+
+  <footer>Updated <b id="updated">-</b></footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var D = window.SALE || {};
+  var n = function(x){ return Number(x||0).toLocaleString('en-US'); };
+  var money = function(x, dec){ return '$' + Number(x||0).toLocaleString('en-US',{minimumFractionDigits:dec||0,maximumFractionDigits:dec||0}); };
+  var $ = function(id){ return document.getElementById(id); };
+
+  var days = D.salesByDay || [];
+  var sold = days.reduce(function(s,d){ return s + (d.upcoming ? 0 : (d.count||0)); }, 0);
+  var rev = days.reduce(function(s,d){ return s + (d.upcoming ? 0 : (d.amount!=null ? d.amount : (d.count||0)*(D.salePrice||99))); }, 0);
+  $('salecount').textContent = n(sold);
+  $('alltotal').textContent = n((D.enrolledBeforeSale||0) + sold);
+  $('revenue').textContent = money(rev);
+  $('revsub').textContent = 'At the $' + (D.salePrice||99) + ' sale price';
+  $('advisits').textContent = n(D.adVisits);
+  if (D.eyebrow) $('eyebrow').textContent = D.eyebrow;
+
+  // Sale strip and countdown
+  $('code').textContent = D.code || '';
+  $('regprice').textContent = '$' + (D.regularPrice||199);
+  $('saleprice').textContent = '$' + (D.salePrice||99);
+  $('ends').textContent = D.saleEndsText || '';
+  function tick(){
+    var ms = new Date(D.saleEnds) - new Date();
+    if (!(ms > 0)) { $('countdown').textContent = 'The sale has ended'; return; }
+    var d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
+    var parts = [];
+    if (d) parts.push(d + (d===1?' day':' days'));
+    if (d || h) parts.push(h + (h===1?' hour':' hours'));
+    if (!d) parts.push(m + (m===1?' minute':' minutes'));
+    $('countdown').textContent = parts.join(', ') + ' left';
+  }
+  tick(); setInterval(tick, 30000);
+
+  // Courses sold by day
+  var cols = 'repeat(' + (days.length||1) + ',1fr)';
+  $('bars').style.gridTemplateColumns = cols; $('days').style.gridTemplateColumns = cols;
+  var max = Math.max.apply(null, days.map(function(d){ return d.count||0; }).concat([1]));
+  $('bars').innerHTML = days.map(function(d){
+    var up = d.upcoming;
+    var h = up ? 0 : Math.max((d.count||0)/max*100, 1.5);
+    var tip = up ? 'Still ahead' : (d.count + (d.count===1?' course sold':' courses sold') + (d.today?' so far today':'') + (d.note?' ('+d.note+')':''));
+    return '<div class="bar'+(up?' upcoming':'')+'" tabindex="0"><span class="tip">'+d.day+', '+d.date+': '+tip+'</span>'
+         + '<div class="num">'+(up?'Ahead':n(d.count))+'</div><div class="fill" style="height:'+h+'%"></div></div>';
+  }).join('');
+  $('days').innerHTML = days.map(function(d){
+    return '<div class="'+(d.today?'today':'')+'">'+(d.today?'Today':d.day)+'<span>'+d.date+'</span></div>';
+  }).join('');
+
+  // Emails
+  var em = D.emails || [];
+  var reached = em.reduce(function(s,e){ return s + (e.delivered||0); }, 0);
+  $('emailsub').textContent = em.length + (em.length===1?' email':' emails') + ' \u00b7 ' + n(reached) + ' inboxes reached';
+  var maxRate = Math.max.apply(null, em.map(function(e){ return e.openRate||0; }).concat([1]));
+  $('emrows').innerHTML = em.map(function(e){
+    return '<tr><td><span class="subj">'+e.name+'</span>'+(e.preview?'<button class="pv-link" type="button" data-pv="'+e.preview+'">Preview</button>':'')+(e.early?'<span class="tag">Still going out</span>':'')
+         + '<span class="when">'+e.date+'</span></td>'
+         + '<td class="n hide-sm">'+n(e.delivered)+'</td>'
+         + '<td class="n"><div class="rate"><div class="track"><div style="width:'+(e.openRate/maxRate*100)+'%"></div></div>'+e.openRate.toFixed(1)+'%</div></td>'
+         + '<td class="n">'+e.clickRate.toFixed(2)+'%</td></tr>';
+  }).join('');
+  $('emnote').textContent = D.emailsStillToCome ? ('Still to come: ' + D.emailsStillToCome + '.') : '';
+
+  // Ads
+  $('adspend').innerHTML = money(D.adSpend) + ' <small>of ' + money(D.adBudget) + '</small>';
+  $('admeter').style.width = Math.min(100, (D.adSpend||0)/(D.adBudget||1)*100) + '%';
+  $('adbudget').textContent = D.adRunsThrough || '';
+  $('adcpv').textContent = money(D.adCostPerVisit, 2);
+  $('adreach').textContent = n(D.adReach);
+  if (D.warmupVisits) $('warmup').textContent = 'A warm-up video with David ran Tuesday through Thursday before the sale and brought ' + n(D.warmupVisits) + ' more visits to the course page.';
+  else $('warmup').remove();
+
+  $('updated').textContent = D.updated || '';
+  if (D.adPreview){ $('adpv').setAttribute('data-pv', D.adPreview); } else { $('adpv').hidden = true; }
+  // Hover (or tap) a Preview link to see the email or ad
+  var pv = document.createElement('div'); pv.id = 'pv';
+  var pimg = document.createElement('img'); pimg.alt = 'Preview'; pv.appendChild(pimg);
+  document.body.appendChild(pv);
+  var current = null;
+  function place(btn){
+    var r = btn.getBoundingClientRect(), vw = window.innerWidth, vh = window.innerHeight;
+    var w = pv.offsetWidth, h = pv.offsetHeight;
+    var x = r.right + 14; if (x + w > vw - 10) x = r.left - w - 14; if (x < 10) x = Math.max(10, (vw - w) / 2);
+    var y = r.top + r.height/2 - h/2; y = Math.max(10, Math.min(y, vh - h - 10));
+    pv.style.left = x + 'px'; pv.style.top = y + 'px';
+  }
+  function show(btn){
+    var src = btn.getAttribute('data-pv'); if (!src) return;
+    current = btn;
+    if (pimg.getAttribute('src') !== src){ pimg.onload = function(){ if (current === btn) place(btn); }; pimg.src = src; }
+    pv.className = 'show'; place(btn);
+  }
+  function hide(){ current = null; pv.className = ''; }
+  document.addEventListener('mouseover', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b) show(b); });
+  document.addEventListener('mouseout', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b && !b.contains(e.relatedTarget)) hide(); });
+  document.addEventListener('focusin', function(e){ if (e.target.classList && e.target.classList.contains('pv-link')) show(e.target); });
+  document.addEventListener('focusout', function(e){ if (e.target.classList && e.target.classList.contains('pv-link')) hide(); });
+  document.addEventListener('click', function(e){ var b = e.target.closest && e.target.closest('.pv-link'); if (b){ e.preventDefault(); show(b); } else hide(); });
+  window.addEventListener('scroll', function(){ if (current) hide(); }, {passive:true});
+})();
+</script>
+</body>
+</html>
